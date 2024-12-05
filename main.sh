@@ -1,0 +1,1 @@
+nohup python -u zero-shot.py >> ./result/log.log 2>&1 &

@@ -1,0 +1,2929 @@
+{
+    "IgA肾病质控指标_肾活检患者术前检查完成率": {
+        "definition": "肾活检患者2周内完成全部相关术前检查的比例。",
+        "formula": "肾活检患者术前检查完成率=完成全部相关术前检查的肾活检患者数/同期肾活检患者总数",
+        "significance": "反映医疗机构肾活检术前检查规范水平。",
+        "other": "肾活检前必需的检查项目包括：（1）血常规、尿常规。（2）肝肾功能、凝血功能、感染性疾病筛查（乙肝、丙肝、梅毒、HIV）、补体C3、免疫球蛋白IgA、血型。（3）24小时尿蛋白定量。（4）超声检查（包括双肾形态和大小、输尿管和膀胱），以上所有检查均完成定义为完成检查。",
+        "instruction_standard": "你是一位专业的医生，请你判断肾活检的患者病历是否完成全部相关术前检查。肾活检前必需的检查项目包括：（1）血常规、尿常规。（2）肝肾功能、凝血功能、感染性疾病筛查（乙肝、丙肝、梅毒、HIV）、补体C3、免疫球蛋白IgA、血型。（3）24小时尿蛋白定量。（4）超声检查（包括双肾形态和大小、输尿管和膀胱），以上所有检查均完成定义为完成检查。",
+        "numerator": "完成全部相关术前检查的肾活检患者",
+        "denominator": "同期肾活检患者总数",
+        "question_rule": "是否完成全部相关术前检查。肾活检前必需的检查项目包括：（1）血常规、尿常规。（2）肝肾功能、凝血功能、感染性疾病筛查（乙肝、丙肝、梅毒、HIV）、补体C3、免疫球蛋白IgA、血型。（3）24小时尿蛋白定量。（4）超声检查（包括双肾形态和大小、输尿管和膀胱），以上所有检查均完成定义为完成检查。",
+        "facts": [
+            "血常规和尿常规检查完成 = True/False。",
+            "肝肾功能、凝血功能检查完成 = True/False。",
+            "感染性疾病筛查（乙肝、丙肝、梅毒、HIV）完成 = True/False。",
+            "补体C3、免疫球蛋白IgA、血型检查完成 = True/False。",
+            "24小时尿蛋白定量完成 = True/False。",
+            "超声检查（包括双肾形态和大小、输尿管和膀胱）完成 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则血常规和尿常规检查完成。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果Fact 2为真，则肝肾功能、凝血功能检查完成。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果Fact 3为真，则感染性疾病筛查完成。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果Fact 4为真，则补体C3、免疫球蛋白IgA、血型检查完成。",
+                "symbolic language": "Fact 4 = True  "
+            },
+            {
+                "natural language": "如果Fact 5为真，则24小时尿蛋白定量完成。",
+                "symbolic language": "Fact 5 = True  "
+            },
+            {
+                "natural language": "如果Fact 6为真，则超声检查完成。",
+                "symbolic language": "Fact 6 = True  "
+            },
+            {
+                "natural language": "如果所有Logical Rules 1至6为真，则患者完成全部术前检查。",
+                "symbolic language": " (Fact 1 = True) ∧ (Fact 2 = True) ∧ (Fact 3 = True) ∧ (Fact 4 = True) ∧ (Fact 5 = True) ∧ (Fact 6 = True)"
+            }
+        ]
+    },
+    "垂体腺瘤（初发，手术治疗）（PA）质控指标_手术全切除及近全切除程度比例": {
+        "definition": "单位时间内，全切除及近全切除的垂体腺瘤手术患者例数占同期垂体腺瘤手术患者总例数的比例。",
+        "formula": "手术全切除及近全切除程度比例=全切除及近全切除的垂体腺瘤手术患者例数/同期垂体腺瘤手术患者总例数",
+        "significance": "手术切除程度与肿瘤复发率呈正相关，是反映医疗机构垂体腺瘤规范化治疗的重要指标之一。",
+        "other": "手术切除程度术后评估需在24-72小时内完成MRI平扫+增强扫描进行影像学评估。切除程度评估分为：无法切除或活检，部分切除，次全切除，近全切除，全切除。",
+        "instruction_standard": "你是一位专业的医生，请你判断垂体腺瘤手术患者病历是否为全切除及近全切除。切除程度评估分为：无法切除或活检，部分切除，次全切除，近全切除，全切除。",
+        "numerator": "全切除及近全切除的垂体腺瘤手术患者",
+        "denominator": "同期垂体腺瘤手术患者总例数",
+        "question_rule": "是否为全切除及近全切除。切除程度评估分为：无法切除或活检，部分切除，次全切除，近全切除，全切除。",
+        "facts": [
+            "手术后肿瘤残留程度 = Z（假设值，可能为：无法切除或活检、部分切除、次全切除、近全切除、全切除）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Z = 全切除，则手术为全切除。",
+                "symbolic language": "Z = 全切除"
+            },
+            {
+                "natural language": "如果Z = 近全切除，则手术为近全切除。",
+                "symbolic language": "Z = 近全切除"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则手术为全切除或近全切除。",
+                "symbolic language": " (Z = 全切除) ∨ (Z = 近全切除)] "
+            }
+        ]
+    },
+    "房颤（AF）质控指标_心房颤动患者行节律控制患者比例": {
+        "definition": "单位时间内，心房颤动住院期间行节律控制策略的患者数，占同期住院心房颤动患者总数的比例。节律控制策略包括：抗心律失常药物复律、电复律、经导管消融治疗。",
+        "formula": "心房颤动患者行节律控制患者比例=心房颤动住院期间行节律控制策略的患者数/同期住院心房颤动患者总数×100%",
+        "significance": "评价医疗机构房颤患者的诊疗策略。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断住院心房颤动患者是否完成节律控制策略相关治疗要求。节律控制策略包括：抗心律失常药物复律、电复律、经导管消融治疗。",
+        "numerator": "心房颤动住院期间行节律控制策略的患者",
+        "denominator": "同期住院心房颤动患者总数",
+        "question_rule": "是否完成节律控制策略相关治疗要求。节律控制策略包括：抗心律失常药物复律、电复律、经导管消融治疗。",
+        "facts": [
+            "患者病史和当前状况是否完成抗心律失常药物复律（假设值为True或False）。",
+            "患者病史和当前状况是否完成电复律（假设值为True或False）。",
+            "患者病史和当前状况是否完成经导管消融治疗（假设值为True或False）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则患者完成抗心律失常药物复律。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果Fact 2为真，则患者完成电复律。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果Fact 3为真，则患者完成经导管消融治疗。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真或Logical Rule 3为真，则患者符合节律控制策略要求。",
+                "symbolic language": " Fact 1 ∨ Fact 2 ∨ Fact 3"
+            }
+        ]
+    },
+    "房颤（AF）质控指标_非瓣膜性心房颤动（房颤）患者血栓栓塞风险评估率": {
+        "definition": "单位时间内，行血栓栓塞风险评估的非瓣膜性房颤患者数，占同期非瓣膜性房颤患者总数的比例。",
+        "formula": "非瓣膜性房颤患者血栓栓塞风险评估率=行血栓栓塞风险评估的非瓣膜性房颤患者数/同期非瓣膜性房颤患者总数",
+        "significance": "评价非瓣膜性房颤患者评估的规范性。",
+        "other": "血栓栓塞风险评估推荐采用CHA2DS2-VASc评分。",
+        "instruction_standard": "你是一位专业的医生，请你判断非瓣膜性房颤患者的病历是否符合行血栓栓塞风险评估的要求。请使用CHA2DS2-VASc评分进行评估。",
+        "numerator": "行血栓栓塞风险评估的非瓣膜性房颤患者",
+        "denominator": "同期非瓣膜性房颤患者总数",
+        "question_rule": "是否符合行血栓栓塞风险评估的要求。请使用CHA2DS2-VASc评分进行评估。",
+        "facts": [
+            "CHA2DS2-VASc评分 = True/False",
+            "栓塞评分 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "完成任意评分则认为完成血栓栓塞风险评估。",
+                "symbolic language": " Fact 1 ∧ Fact 2"
+            }
+        ]
+    },
+    "房颤（AF）质控指标_房颤患者出血风险评估率": {
+        "definition": "单位时间内，行出血风险评估的房颤患者数，占同期房颤患者总数的比例。",
+        "formula": "房颤患者出血风险评估率=行出血风险评估的房颤患者数/同期房颤患者总数",
+        "significance": "评价房颤患者评估的规范性。",
+        "other": "出血风险评估推荐采用HAS-BLED评分、ORBIT评分或ABC评分等。",
+        "instruction_standard": "你是一位专业的医生，请你判断房颤患者的病历是否符合行出血风险评估的要求。请采用HAS-BLED评分、ORBIT评分或ABC评分进行评估。",
+        "numerator": "行出血风险评估的房颤患者",
+        "denominator": "同期房颤患者总数",
+        "question_rule": "是否符合行出血风险评估的要求。请采用HAS-BLED评分、ORBIT评分或ABC评分进行评估。",
+        "facts": [
+            "HAS-BLED评分 = True/False",
+            "ORBIT评分 = True/False",
+            "ABC评分 = True/False",
+            "出血评分 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "完成任意评分则认为完成出血风险评估。  ",
+                "symbolic language": " Fact 1 ∧ Fact 2 ∧ Fact 3 ∧ Fact 4"
+            }
+        ]
+    },
+    "肺癌_手术指征符合率（核心指标）": {
+        "definition": "单位时间内，符合手术指征的肺癌患者人次数占同期肺癌手术患者总人次数的比例。",
+        "formula": "手术指征符合率=符合手术指征的肺癌患者人次数/同期肺癌手术患者总人次数",
+        "significance": "体现应用肺癌手术的精准性，是反映医疗机构肺癌手术医疗质量的重要过程性指标之一。",
+        "other": "病理报告中肿瘤支气管切缘阴性；且病理报告中无转移淋巴结或第2组淋巴结无转移或第5组淋巴结无转移",
+        "instruction_standard": "你是一位专业的医生，请你判断肺癌患者的病历是否符合符合手术指征的要求。病理报告中肿瘤支气管切缘阴性；且病理报告中无转移淋巴结或第2组淋巴结无转移或第5组淋巴结无转移。",
+        "numerator": "符合手术指征的肺癌患者",
+        "denominator": "同期肺癌手术患者总人次数",
+        "question_rule": "是否符合符合手术指征的要求。病理报告中肿瘤支气管切缘阴性；且病理报告中无转移淋巴结或第2组淋巴结无转移或第5组淋巴结无转移。",
+        "facts": [
+            "肿瘤支气管切缘状态 = 阴性/阳性。",
+            "是否有转移淋巴结 = True/False。",
+            "第2组淋巴结状态 = 无转移/有转移。",
+            "第5组淋巴结状态 = 无转移/有转移。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果肿瘤支气管切缘为阴性，则符合切缘要求。",
+                "symbolic language": "支气管切缘 = 阴性"
+            },
+            {
+                "natural language": "如果无转移淋巴结或第2组淋巴结无转移或第5组淋巴结无转移，则符合淋巴结转移要求。",
+                "symbolic language": "¬转移淋巴结 ∨ ¬第2组淋巴结转移 ∨ ¬第5组淋巴结转移"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真，则患者符合手术指征要求。",
+                "symbolic language": " (支气管切缘 = 阴性) ∧ (¬转移淋巴结 ∨ ¬第2组淋巴结转移 ∨ ¬第5组淋巴结转移)"
+            }
+        ]
+    },
+    "肺癌_术前评估率": {
+        "definition": "单位时间内，进行术前评估的肺癌患者人次数占同期住院行肺癌手术的患者总人次数的比例。",
+        "formula": "术前评估率=进行术前评估的肺癌患者人次数/同期住院行肺癌手术的患者总人次数",
+        "significance": "体现肺癌手术术前准备的充分性，是反映医疗机构肺癌手术医疗质量的重要过程性指标之一。",
+        "other": "检查报告包含心肺功能评估（心电图或心超或肺功能）或其他脏器功能评估；\n且包含可以进行肿瘤临床分期的检查（CT或PET-CT或头颅MRI或骨扫描或脏器及体表超声或气管镜检查或完成EBUS-TBNA或纵隔镜手术）",
+        "instruction_standard": "你是一位专业的医生，请你判断肺癌患者的病历是否符合进行术前评估的要求。相关补充检查报告包含心肺功能评估（心电图或心超或肺功能）或其他脏器功能评估；且包含可以进行肿瘤临床分期的检查（CT或PET-CT或头颅MRI或骨扫描或脏器及体表超声或气管镜检查或完成EBUS-TBNA或纵隔镜手术）。",
+        "numerator": "进行术前评估的肺癌患者",
+        "denominator": "同期住院行肺癌手术的患者总人次数",
+        "question_rule": "是否符合进行术前评估的要求。相关补充检查报告包含心肺功能评估（心电图或心超或肺功能）或其他脏器功能评估；且包含可以进行肿瘤临床分期的检查（CT或PET-CT或头颅MRI或骨扫描或脏器及体表超声或气管镜检查或完成EBUS-TBNA或纵隔镜手术）。",
+        "facts": [
+            "心电图检查 = True/False。",
+            "心超检查 = True/False。",
+            "肺功能检查 = True/False。",
+            "其他脏器功能评估 = True/False。",
+            "CT检查 = True/False。",
+            "PET-CT检查 = True/False。",
+            "头颅MRI检查 = True/False。",
+            "骨扫描 = True/False。",
+            "脏器及体表超声检查 = True/False。",
+            "气管镜检查 = True/False。",
+            "EBUS-TBNA = True/False。",
+            "纵隔镜手术 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果进行心电图或心超或肺功能检查，或其他脏器功能评估，则心肺功能评估完成。",
+                "symbolic language": " (心电图检查 ∨ 心超检查 ∨ 肺功能检查)∨ 其他脏器功能评估"
+            },
+            {
+                "natural language": "如果进行CT或PET-CT或头颅MRI或骨扫描或脏器及体表超声或气管镜检查或完成EBUS-TBNA或纵隔镜手术，则肿瘤临床分期检查完成。",
+                "symbolic language": " (CT检查 ∨ PET-CT检查 ∨ 头颅MRI检查 ∨ 骨扫描 ∨ 脏器及体表超声检查 ∨ 气管镜检查 ∨ EBUS-TBNA ∨ 纵隔镜手术)"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真，则患者符合进行术前评估的要求。",
+                "symbolic language": " （(心电图检查 ∨ 心超检查 ∨ 肺功能检查) ∨ 其他脏器功能评估）∧ (CT检查 ∨ PET-CT检查 ∨ 头颅MRI检查 ∨ 骨扫描 ∨ 脏器及体表超声检查 ∨ 气管镜检查 ∨ EBUS-TBNA ∨ 纵隔镜手术)"
+            }
+        ]
+    },
+    "冠心病介入治疗技术质控指标_冠脉介入治疗术后即刻冠状动脉造影成功率": {
+        "definition": "单位时间内，冠脉介入治疗术后即刻冠状动脉造影成功的例数，占同期接受冠脉介入治疗的总例数的比例。",
+        "formula": "冠脉介入治疗术后即刻冠状动脉造影成功率=冠脉介入治疗术后即刻冠状动脉造影成功的例数/同期接受冠脉介入治疗的总例数",
+        "significance": "评价手术诊疗质量情况。",
+        "other": "冠状动脉造影成功是指支架术后病变残余狭窄<20%或单纯经皮冠状动脉腔内血管成形术（PTCA）后病变残余狭窄<50%，且冠状动脉血流心肌梗死溶栓（TIMI）分级3级。",
+        "instruction_standard": "你是一位专业的医生，请你判断冠脉介入治疗术患者病历是否符合术后即刻冠状动脉造影成功要求：支架术后病变残余狭窄<20%或单纯经皮冠状动脉腔内血管成形术（PTCA）后病变残余狭窄<50%，且冠状动脉血流心肌梗死溶栓（TIMI）分级3级。",
+        "numerator": "冠脉介入治疗术后即刻冠状动脉造影成功的患者",
+        "denominator": "同期接受冠脉介入治疗的总例数",
+        "question_rule": "是否符合术后即刻冠状动脉造影成功要求：支架术后病变残余狭窄<20%或单纯经皮冠状动脉腔内血管成形术（PTCA）后病变残余狭窄<50%，且冠状动脉血流心肌梗死溶栓（TIMI）分级3级。",
+        "facts": [
+            "支架术后病变残余狭窄 = S1（假设值）。",
+            "单纯PTCA后病变残余狭窄 = S2（假设值）。",
+            "术后冠状动脉血流TIMI分级 = T（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果S1 < 20%，则支架术后病变符合要求。",
+                "symbolic language": "S1 < 20%"
+            },
+            {
+                "natural language": "如果S2 < 50%，则单纯PTCA后病变符合要求。",
+                "symbolic language": "S2 < 50%"
+            },
+            {
+                "natural language": "如果T = 3，则TIMI分级符合要求。",
+                "symbolic language": "T = 3"
+            },
+            {
+                "natural language": "如果(Logical Rule 1为真或Logical Rule 2为真)且Logical Rule 3为真，则患者符合术后即刻冠状动脉造影成功要求。",
+                "symbolic language": "((S1 < 20%) ∨ (S2 < 50%)) ∧ (T = 3)"
+            }
+        ]
+    },
+    "急性动脉瘤性蛛网膜下腔出血（初发，手术治疗）（aSAH）_脑动脉瘤完全闭塞患者占比": {
+        "definition": "单位时间内，脑动脉瘤完全闭塞患者例数占同期急性动脉瘤性蛛网膜下腔出血手术患者总例数的比例。",
+        "formula": "脑动脉瘤完全闭塞患者占比=脑动脉瘤完全闭塞患者例数/同期急性动脉瘤性蛛网膜下腔出血手术患者总例数",
+        "significance": "脑动脉瘤闭塞程度与动脉瘤复发及出血风险呈正相关，是反映医疗机构急性动脉瘤性蛛网膜下腔出血规范化治疗的重要指标之一。",
+        "other": "评估采用术中或术后CTA或者DSA进行。闭塞程度评估分为：完全闭塞及残留。",
+        "instruction_standard": "你是一位专业的医生，请你判断急性动脉瘤性蛛网膜下腔出血手术患者病历是否符合术中或术后CTA或者DSA评估，且闭塞程度为完全闭塞及残留的要求。",
+        "numerator": "脑动脉瘤完全闭塞患者",
+        "denominator": "同期急性动脉瘤性蛛网膜下腔出血手术患者总例数",
+        "question_rule": "是否符合术中或术后CTA或者DSA评估，且闭塞程度为完全闭塞及残留的要求。",
+        "facts": [
+            "术中CTA评估结果 = C1（假设值）。",
+            "术中DSA评估结果 = D1（假设值）。",
+            "术后CTA评估结果 = C2（假设值）。",
+            "术后DSA评估结果 = D2（假设值）。",
+            "CTA评估闭塞程度 = E1（假设值，可能为“完全闭塞”或“有残留”）。",
+            "DSA评估闭塞程度 = E2（假设值，可能为“完全闭塞”或“有残留”）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果术中CTA评估结果存在且E1符合要求，则术中CTA评估符合要求。",
+                "symbolic language": "C1存在 ∧ (E1 = “完全闭塞” ∨ E1 = “有残留”)"
+            },
+            {
+                "natural language": "如果术中DSA评估结果存在且E2符合要求，则术中DSA评估符合要求。",
+                "symbolic language": "D1存在 ∧ (E2 = “完全闭塞” ∨ E2 = “有残留”)"
+            },
+            {
+                "natural language": "如果术后CTA评估结果存在且E1符合要求，则术后CTA评估符合要求。",
+                "symbolic language": "C2存在 ∧ (E1 = “完全闭塞” ∨ E1 = “有残留”)"
+            },
+            {
+                "natural language": "如果术后DSA评估结果存在且E2符合要求，则术后DSA评估符合要求。",
+                "symbolic language": "D2存在 ∧ (E2 = “完全闭塞” ∨ E2 = “有残留”)"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真或Logical Rule 3为真或Logical Rule 4为真，则患者符合术中或术后评估要求。",
+                "symbolic language": " (C1存在 ∧ (E1 = “完全闭塞” ∨ E1 = “有残留”)) ∨ (D1存在 ∧ (E2 = “完全闭塞” ∨ E2 = “有残留”)) ∨ (C2存在 ∧ (E1 = “完全闭塞” ∨ E1 = “有残留”)) ∨ (D2存在 ∧ (E2 = “完全闭塞” ∨ E2 = “有残留”))"
+            }
+        ]
+    },
+    "颈动脉支架置入术质控指标_颈动脉支架置入术患者术前mRS评估率": {
+        "definition": "单位时间内，术前行改良Rankin量表(mRS)评估的颈动脉支架置入术患者数占颈动脉支架置入术患者总数的比例。",
+        "formula": "颈动脉支架置入术患者术前mRS评估率=术前行mRS评估的颈动脉支架置入术患者数/同期颈动脉支架置入术患者总数",
+        "significance": "反映医疗机构对颈动脉支架置入术患者术前规范化评估的现状。",
+        "other": "mRS参照《中国脑血管病临床管理指南》。",
+        "instruction_standard": "你是一位专业的医生，请你判断颈动脉支架置入术患者的病历是否符合术前行mRS评估的要求。请参照《中国脑血管病临床管理指南》。",
+        "numerator": "术前行mRS评估的颈动脉支架置入术患者",
+        "denominator": "同期颈动脉支架置入术患者总数",
+        "question_rule": "是否符合术前行mRS评估的要求。请参照《中国脑血管病临床管理指南》。",
+        "facts": [
+            "术前是否进行了mRS评估 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果术前进行了mRS评估，则符合术前评估要求。",
+                "symbolic language": "Fact 1 = True"
+            }
+        ]
+    },
+    "颈动脉支架置入术质控指标_颈动脉支架置入术技术成功率（核心指标）": {
+        "definition": "单位时间内，颈动脉支架置入术技术成功人数占颈动脉支架置入术患者总数的比例。",
+        "formula": "颈动脉支架置入术技术成功率=技术成功的颈动脉支架置入术患者数/同期颈动脉支架置入术患者总数",
+        "significance": "反映医疗机构开展颈动脉支架置入术技术规范性。",
+        "other": "颈动脉支架置入术技术成功定义为术后残余狭窄≤30%且术后血流mTICI分级3级。",
+        "instruction_standard": "你是一位专业的医生，请你判断颈动脉支架置入术的患者病历是否符合颈动脉支架置入术技术成功的要求。其中，颈动脉支架置入术技术成功定义为术后残余狭窄≤30%且术后血流mTICI分级3级。",
+        "numerator": "技术成功的颈动脉支架置入术患者",
+        "denominator": "同期颈动脉支架置入术患者总数",
+        "question_rule": "是否符合颈动脉支架置入术技术成功的要求。颈动脉支架置入术技术成功定义为术后残余狭窄≤30%且术后血流mTICI分级3级。",
+        "facts": [
+            "术后残余狭窄 = C%（假设值）。",
+            "术后血流mTICI分级 = D（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果C ≤ 30，则术后残余狭窄符合技术成功要求。",
+                "symbolic language": "C ≤ 30"
+            },
+            {
+                "natural language": "如果D = 3，则术后血流mTICI分级符合技术成功要求。",
+                "symbolic language": "D = 3"
+            },
+            {
+                "natural language": "如果Logical Rule 1和Logical Rule 2均为真，则颈动脉支架置入术技术成功。",
+                "symbolic language": " (C ≤ 30) ∧ (D = 3)"
+            }
+        ]
+    },
+    "脑出血（ICH）质控指标_脑出血患者高血压控制率": {
+        "definition": "单位时间内，收缩压高于180mmHg的患者进行血压控制的例\n数占同期收缩压高于180mmHg的脑出血患者总例数的比例。",
+        "formula": "高血压控制率=对收缩压高于180mmHg的脑出血患者进行血压控制的例数/同期收缩压高于180mmHg的脑出血患者总例数×100%",
+        "significance": "反映医疗机构脑出血急诊处置诊疗水平的重要指标之一。",
+        "other": "其中对于收缩压150~220mmHg的住院患者，在没有急性降压禁忌证的情况下，数小时内降压至130~140mmHg是安全的；对于收缩压>220mmHg的脑出血患者，在密切监测血压的情况下，持续静脉输注药物控制血压可能是合理的，收缩压目标值为160mmHg。",
+        "instruction_standard": "你是一位专业的医生，请你判断病历内容是否符合对收缩压高于180mmHg的患者进行血压控制的要求。",
+        "numerator": "对收缩压高于180mmHg的脑出血患者进行血压控制",
+        "denominator": "同期收缩压高于180mmHg的脑出血患者总例数",
+        "question_rule": "是否符合对收缩压高于180mmHg的患者进行血压控制的要求。",
+        "facts": [
+            "患者收缩压 = SBP（假设值）。",
+            "是否采取了血压控制措施 = C（True/False）。",
+            "血压控制后的收缩压 = SBP'（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果SBP > 180，则需要进行血压控制。",
+                "symbolic language": "SBP > 180 → C = True"
+            },
+            {
+                "natural language": "如果采取了血压控制措施，则应检查其效果。",
+                "symbolic language": "C = True → 检查SBP'"
+            },
+            {
+                "natural language": "如果血压控制措施有效，则SBP'应低于或等于目标值（假设为180mmHg）。",
+                "symbolic language": "SBP' ≤ 180"
+            }
+        ]
+    },
+    "脑出血（ICH）质控指标_手术适应症符合率": {
+        "definition": "单位时间内，符合手术适应证的手术患者例数占同期脑出血手术患者总例数的比例。",
+        "formula": "手术适应证符合率=符合手术适应证的手术患者例数/同期脑出血手术患者总例数",
+        "significance": "体现医疗机构开展脑出血手术技术水平的重要指标之一。",
+        "other": "手术适应症包括：幕上脑出血≥30ml，神经功能恶化或脑干受压的小脑出血，脑室出血，脑干出血，GCS评分进行性下降，其他等。",
+        "instruction_standard": "你是一位专业的医生，请你判断脑出血患者是否符合符合手术适应证。手术适应症包括：幕上脑出血≥30ml，神经功能恶化或脑干受压的小脑出血，脑室出血，脑干出血，GCS评分进行性下降，其他等。",
+        "numerator": "符合手术适应证的手术患者",
+        "denominator": "同期脑出血手术患者总例数",
+        "question_rule": "是否符合符合手术适应证。手术适应症包括：幕上脑出血≥30ml，神经功能恶化或脑干受压的小脑出血，脑室出血，脑干出血，GCS评分进行性下降，其他等。",
+        "facts": [
+            "幕上脑出血体积 = V（假设值）。",
+            "神经功能状态 = E（假设为恶化或稳定）。",
+            "小脑出血是否导致脑干受压 = C（假设为是或否）。",
+            "是否存在脑室出血 = I（假设为是或否）。",
+            "是否存在脑干出血 = S（假设为是或否）。",
+            "GCS评分变化 = ΔGCS（假设值，正数表示下降）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果V ≥ 30，则符合幕上脑出血手术适应症。",
+                "symbolic language": "V ≥ 30"
+            },
+            {
+                "natural language": "如果E = 恶化，则符合神经功能恶化手术适应症。",
+                "symbolic language": "E = 恶化"
+            },
+            {
+                "natural language": "如果C = 是，则符合小脑出血导致脑干受压手术适应症。",
+                "symbolic language": "C = True"
+            },
+            {
+                "natural language": "如果I = 是，则符合脑室出血手术适应症。",
+                "symbolic language": "I = True"
+            },
+            {
+                "natural language": "如果S = 是，则符合脑干出血手术适应症。",
+                "symbolic language": "S = True"
+            },
+            {
+                "natural language": "如果ΔGCS > 0，则符合GCS评分进行性下降手术适应症。",
+                "symbolic language": "ΔGCS > 0"
+            },
+            {
+                "natural language": "以上任一Logical Rules为Tue，则患者符合手术适应症",
+                "symbolic language": "(V ≥ 30) ∨ (E = 恶化) ∨ (C = True) ∨ (I = True) ∨ (S = True) ∨ (ΔGCS > 0)"
+            }
+        ]
+    },
+    "脑出血（ICH）质控指标_出院时好转/稳定率": {
+        "definition": "单位时间内，出院时GCS评分或NIHSS评分等于或优于入院时的患者例数占同期脑出血患者总例数的比例。",
+        "formula": "出院时好转/稳定率=出院时GCS评分或NIHSS评分等于或优于入院时的患者例数/同期脑出血患者总例数×100%",
+        "significance": "反映医疗机构脑出血治疗技术水平的重要指标之一。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断患者的病历是否符合出院时GCS评分或NIHSS评分等于或优于入院时的要求。",
+        "numerator": "出院时GCS评分或NIHSS评分等于或优于入院时的患者",
+        "denominator": "同期脑出血患者总例数",
+        "question_rule": "是否符合出院时GCS评分或NIHSS评分等于或优于入院时的要求。",
+        "facts": [
+            "入院时GCS评分 = X（假设值）。",
+            "出院时GCS评分 = Y（假设值）。",
+            "入院时NIHSS评分 = A（假设值）。",
+            "出院时NIHSS评分 = B（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Y >= X，则GCS评分符合出院要求。",
+                "symbolic language": "Y >= X"
+            },
+            {
+                "natural language": "如果B <= A，则NIHSS评分符合出院要求。",
+                "symbolic language": "B <= A"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则患者符合出院评分要求。",
+                "symbolic language": " (Y >= X) ∨ (B <= A)"
+            }
+        ]
+    },
+    "脑出血（ICH）质控指标_住院期间患者吞咽功能筛查率": {
+        "definition": "单位时间内，饮食前进行吞咽功能筛查的住院脑出血患者例数占同期住院治疗的脑出血患者总例数的比例。",
+        "formula": "住院期间患者吞咽功能筛查率=饮食前进行吞咽功能筛查的脑出血患者例数/同期住院治疗的脑出血患者总例数",
+        "significance": "反映医疗机构减少住院期间并发症的诊疗措施执行情况。",
+        "other": "吞咽功能筛查工具包括洼田饮水试验、容积—粘度测试（VVST）、洼田吞咽功能障碍评价、Gugging吞咽功能评估表（GUSS）等。",
+        "instruction_standard": "你是一位专业的医生，请你判断脑出血患者的病历是否符合饮食前进行吞咽功能筛查的要求。吞咽功能筛查工具包括洼田饮水试验、容积—粘度测试（VVST）、洼田吞咽功能障碍评价、Gugging吞咽功能评估表（GUSS）等。",
+        "numerator": "饮食前进行吞咽功能筛查的脑出血患者",
+        "denominator": "同期住院治疗的脑出血患者总例数",
+        "question_rule": "是否符合饮食前进行吞咽功能筛查的要求。吞咽功能筛查工具包括洼田饮水试验、容积—粘度测试（VVST）、洼田吞咽功能障碍评价、Gugging吞咽功能评估表（GUSS）等。",
+        "facts": [
+            "洼田饮水试验已完成（假设值）。  ",
+            "容积—粘度测试（VVST）已完成（假设值）。  ",
+            "洼田吞咽功能障碍评价已完成（假设值）。  ",
+            "Gugging吞咽功能评估表（GUSS）已完成（假设值）。  "
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真或Fact 2为真或Fact 3为真或Fact 4为真，则吞咽功能筛查已完成。  ",
+                "symbolic language": " Fact 1 ∨ Fact 2 ∨ Fact 3 ∨ Fact 4"
+            }
+        ]
+    },
+    "脑膜瘤（初发，手术治疗）（MEN）质控指标_手术适应症符合率（核心指标）": {
+        "definition": "单位时间内，符合脑膜瘤手术适应症的患者例数占同期脑膜瘤手术患者总例数的比例",
+        "formula": "手术适应症符合率=符合脑膜瘤手术适应症的患者例数/同期脑膜瘤手术患者总例数×100%",
+        "significance": "反映医疗机构开展脑膜瘤手术时掌握适应症的程度，是反映医疗机构开展脑膜瘤手术的重要过程性指标之一",
+        "other": "1.适应症情况：（1）对于已经出现局灶性神经功能障碍，颅内压升高，内科治疗无法控制的癫痫和肿瘤观察期内明显增大的患者，应首选手术治疗。（2）直径小于3cm\n的肿瘤，可以行立体定向放疗或手术治疗，应向患者解释各种治疗方法的利弊以共同制定治疗方案。（3）临床偶然发现的脑膜瘤特别是瘤体较小的患者，无颅内压升高和临床症状者，可以观察随访，3-6个月后复查MRI。2.无法确定或无相关记录视为不符合手术适应症。",
+        "instruction_standard": "你是一位专业的医生，请你判断脑膜瘤患者是否符合脑膜瘤手术适应症。1.适应症情况：（1）对于已经出现局灶性神经功能障碍，颅内压升高，内科治疗无法控制的癫痫和肿瘤观察期内明显增大的患者，应首选手术治疗。（2）直径小于3cm\n的肿瘤，可以行立体定向放疗或手术治疗，应向患者解释各种治疗方法的利弊以共同制定治疗方案。（3）临床偶然发现的脑膜瘤特别是瘤体较小的患者，无颅内压升高和临床症状者，可以观察随访，3-6个月后复查MRI。2.无法确定或无相关记录视为不符合手术适应症。",
+        "numerator": "符合脑膜瘤手术适应症的患者",
+        "denominator": "同期脑膜瘤手术患者总例数",
+        "question_rule": "是否符合脑膜瘤手术适应症。适应症情况包括：（1）对于已经出现局灶性神经功能障碍，颅内压升高，内科治疗无法控制的癫痫和肿瘤观察期内明显增大的患者，应首选手术治疗；（2）直径小于3cm的肿瘤，可以行立体定向放疗或手术治疗，应向患者解释各种治疗方法的利弊以共同制定治疗方案；（3）临床偶然发现的脑膜瘤特别是瘤体较小的患者，无颅内压升高和临床症状者，可以观察随访，3-6个月后复查MRI。无法确定或无相关记录视为不符合手术适应症。",
+        "facts": [
+            "患者有局灶性神经功能障碍 = True/False。",
+            "患者有颅内压升高 = True/False。",
+            "患者的癫痫无法通过内科治疗控制 = True/False。",
+            "肿瘤在观察期内明显增大 = True/False。",
+            "肿瘤直径 = C（假设值，单位cm）。",
+            "患者无颅内压升高和临床症状 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真或Fact 2为真或Fact 3为真或Fact 4为真，则符合手术适应症。",
+                "symbolic language": " (Fact 1 = True) ∨ (Fact 2 = True) ∨ (Fact 3 = True) ∨ (Fact 4 = True)"
+            },
+            {
+                "natural language": "如果Fact 5 < 3，则可以选择手术治疗。",
+                "symbolic language": " (C < 3)"
+            },
+            {
+                "natural language": "如果Fact 6为真且Fact 5 < 3，则不符合手术适应症，应观察随访。",
+                "symbolic language": " (Fact 6 ∧ C < 3)"
+            },
+            {
+                "natural language": "如果 ((Fact 1 ∨ Fact 2 ∨ Fact 3 ∨ Fact 4) ∨ (Fact 5 < 3 ∧ ¬Fact 6)，则符合手术适应症。",
+                "symbolic language": "(Fact 1  ∨ Fact 2 ∨ Fact 3 ∨ Fact 4) ∨ (C < 3 ∧ ¬Fact 6)"
+            }
+        ]
+    },
+    "脑血管造影术质控指标_脑血管造影术造影阳性率": {
+        "definition": "单位时间内，脑血管造影术检查有异常发现的患者数占行脑血管造影术的患者总数的比例。",
+        "formula": "脑血管造影术造影阳性率=造影检查有异常发现的脑血管造影术患者数/同期行脑血管造影术的患者总数",
+        "significance": "反映医疗机构脑血管造影术检查规范化诊疗情况。",
+        "other": "脑血管造影术检查有异常发现包含：动脉粥样硬化、栓塞、狭窄、闭塞、动脉瘤、动静脉畸形、动静脉瘘、静脉窦闭塞、静脉窦狭窄、血管变异、颅内占位性病变、颅脑外伤所致各种脑外血肿、血管破裂出血。",
+        "instruction_standard": "你是一位专业的医生，请你判断脑血管造影术患者病历是否符合造影检查有异常发现的要求。脑血管造影术检查有异常发现包含：动脉粥样硬化、栓塞、狭窄、闭塞、动脉瘤、动静脉畸形、动静脉瘘、静脉窦闭塞、静脉窦狭窄、血管变异、颅内占位性病变、颅脑外伤所致各种脑外血肿、血管破裂出血。",
+        "numerator": "造影检查有异常发现的脑血管造影术患者",
+        "denominator": "同期行脑血管造影术的患者总数",
+        "question_rule": "是否符合造影检查有异常发现的要求。脑血管造影术检查有异常发现包含：动脉粥样硬化、栓塞、狭窄、闭塞、动脉瘤、动静脉畸形、动静脉瘘、静脉窦闭塞、静脉窦狭窄、血管变异、颅内占位性病变、颅脑外伤所致各种脑外血肿、血管破裂出血。",
+        "facts": [
+            "动脉粥样硬化 = True/False",
+            "栓塞 = True/False",
+            "狭窄 = True/False",
+            "闭塞 = True/False",
+            "动脉瘤 = True/False",
+            "动静脉畸形 = True/False",
+            "动静脉瘘 = True/False",
+            "静脉窦闭塞 = True/False",
+            "静脉窦狭窄 = True/False",
+            "血管变异 = True/False",
+            "颅内占位性病变 = True/False",
+            "颅脑外伤所致脑外血肿 = True/False",
+            "血管破裂出血 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果任何一个Fact为True，则检查结果有异常发现。",
+                "symbolic language": "Fact 1 ∨ Fact 2 ∨ Fact 3 ∨ Fact 4 ∨ Fact 5 ∨ Fact 6 ∨ Fact 7 ∨ Fact 8 ∨ Fact 9 ∨ Fact 10 ∨ Fact 11 ∨ Fact 12 ∨ Fact 13"
+            }
+        ]
+    },
+    "脑血管造影术质控指标_脑血管造影术严重并发症发生率（核心指标）": {
+        "definition": "单位时间内，脑血管造影术发生严重并发症的患者数占行脑血管造影术的患者总数的比例",
+        "formula": "脑血管造影术严重并发症发生率=发生严重并发症的脑血管造影术患者数/同期行脑血管造影术的患者总数",
+        "significance": "反映医疗机构脑血管造影术安全性。",
+        "other": "严重并发症是指导致死亡或健康状况严重恶化的并发症，包括致命的疾病或者伤害、身体结构或者身体功能的永久性缺陷、需住院治疗或者延长住院时间、需要进行医疗或者手术介入以避免对身体结构或者身体功能造成永久性缺陷。",
+        "instruction_standard": "你是一位专业的医生，请你判断脑血管造影术患者病历是否符合发生严重并发症的要求：严重并发症是指导致死亡或健康状况严重恶化的并发症，包括致命的疾病或者伤害、身体结构或者身体功能的永久性缺陷、需住院治疗或者延长住院时间、需要进行医疗或者手术介入以避免对身体结构或者身体功能造成永久性缺陷。",
+        "numerator": "发生严重并发症的脑血管造影术患者",
+        "denominator": "同期行脑血管造影术的患者总数",
+        "question_rule": "是否符合发生严重并发症的要求。严重并发症是指导致死亡或健康状况严重恶化的并发症，包括致命的疾病或者伤害、身体结构或者身体功能的永久性缺陷、需住院治疗或者延长住院时间、需要进行医疗或者手术介入以避免对身体结构或者身体功能造成永久性缺陷。",
+        "facts": [
+            "并发症导致死亡 = True/False。",
+            "健康状况严重恶化 = True/False。",
+            "并发症为致命疾病或伤害 = True/False。",
+            "存在永久性缺陷 = True/False。",
+            "需要住院或延长住院时间 = True/False。",
+            "需要医疗或手术介入 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果并发症导致死亡，则符合严重并发症要求。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果健康状况严重恶化，则符合严重并发症要求。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果并发症为致命的疾病或伤害，则符合严重并发症要求。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果存在永久性缺陷，则符合严重并发症要求。",
+                "symbolic language": "Fact 4 = True"
+            },
+            {
+                "natural language": "如果需要住院或延长住院时间，则符合严重并发症要求。",
+                "symbolic language": "Fact 5 = True"
+            },
+            {
+                "natural language": "如果需要医疗或手术介入以避免永久性缺陷，则符合严重并发症要求。",
+                "symbolic language": "Fact 6 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1至6中任意一条为真，则患者符合严重并发症要求。",
+                "symbolic language": "Fact 1 ∨ Fact 2 ∨ Fact 3 ∨ Fact 4 ∨ Fact 5 ∨ Fact 6"
+            }
+        ]
+    },
+    "帕金森病（PD）质控指标_住院帕金森病患者进行临床分期的比例": {
+        "definition": "单位时间内，进行临床分期的住院帕金森病患者数占同期住院帕金森病患者总数的比例。",
+        "formula": "住院帕金森病患者进行临床分期的比例=进行临床分期的住院帕金森病患者数×100%同期住院帕金森病患者总数",
+        "significance": "反映医疗机构对于帕金森病规范性的诊疗措施执行情况。有助于根据分期选择针对性治疗策略。为制定适宜的治疗方案提供客观依据。",
+        "other": "临床分期是指Hoehn-Yahr分期。1期：累及单侧肢体；2期：双侧肢体症状但无平衡障碍；3期：轻至中度双侧症状，姿势不稳，不能从后拉试验中恢复，但可自理；4期：重度病残，不需要帮助仍能站立和行走；5期：坐轮椅或卧床，完全依赖别人帮助。",
+        "instruction_standard": "你是一位专业的医生，请你判断住院帕金森病患者的病历是否符合进行临床分期的要求。临床分期是指Hoehn-Yahr分期。1期：累及单侧肢体；2期：双侧肢体症状但无平衡障碍；3期：轻至中度双侧症状，姿势不稳，不能从后拉试验中恢复，但可自理；4期：重度病残，不需要帮助仍能站立和行走；5期：坐轮椅或卧床，完全依赖别人帮助。",
+        "numerator": "进行临床分期的住院帕金森病患者",
+        "denominator": "同期住院帕金森病患者总数",
+        "question_rule": "是否符合进行临床分期的要求。临床分期是指Hoehn-Yahr分期。1期：累及单侧肢体；2期：双侧肢体症状但无平衡障碍；3期：轻至中度双侧症状，姿势不稳，不能从后拉试验中恢复，但可自理；4期：重度病残，不需要帮助仍能站立和行走；5期：坐轮椅或卧床，完全依赖别人帮助。",
+        "facts": [
+            "进行了Hoehn-Yahr分期 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则符合进行临床分期的要求",
+                "symbolic language": "Fact 1 = True"
+            }
+        ]
+    },
+    "帕金森病（PD）质控指标_住院帕金森病患者全面神经功能缺损评估率": {
+        "definition": "单位时间内，进行全面神经功能缺损评估的住院帕金森病患者数占同期住院帕金森病患者总数的比例。",
+        "formula": "住院帕金森病患者全面神经功能缺损评估率=进行全面神经功能缺损评估的住院帕金森病患者数/同期住院帕金森病患者总数×100%",
+        "significance": "反映医疗机构对于帕金森病规范性的诊疗措施执行情况。有助于提高帕金森病住院病例的医疗质量。为制定适宜的治疗方案提供客观依据。",
+        "other": "全面神经功能缺损评估包括：MDS-UPDRS量表（国际运动障碍疾病协会统一的帕金森病评分量表）、UPDRS量表（统一帕金森病评分量表）",
+        "instruction_standard": "你是一位专业的医生，请你判断住院帕金森病患者的病历是否符合进行全面神经功能缺损评估的要求。全面神经功能缺损评估包括：MDS-UPDRS量表（国际运动障碍疾病协会统一的帕金森病评分量表）、UPDRS量表（统一帕金森病评分量表）",
+        "numerator": "进行全面神经功能缺损评估的住院帕金森病患者",
+        "denominator": "同期住院帕金森病患者总数",
+        "question_rule": "是否符合进行全面神经功能缺损评估的要求。全面神经功能缺损评估包括：MDS-UPDRS量表（国际运动障碍疾病协会统一的帕金森病评分量表）、UPDRS量表（统一帕金森病评分量表）",
+        "facts": [
+            "已进行MDS-UPDRS量表评估 = True/False",
+            "已进行UPDRS量表评估 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则MDS-UPDRS评估已完成。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果Fact 2为真，则UPDRS评估已完成。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则患者符合全面神经功能缺损评估的要求。",
+                "symbolic language": "Fact 1 ∨ Fact 2"
+            }
+        ]
+    },
+    "帕金森病（PD）质控指标_住院帕金森病患者运动并发症筛查率": {
+        "definition": "单位时间内，进行运动并发症（包括运动波动、异动症）筛查的住院帕金森病患者数占同期住院帕金森病患者总数的比例。",
+        "formula": "住院帕金森病患者运动并发症筛查率=进行运动并发症筛查的住院帕金森病患者数×100%同期住院帕金森病患者总数",
+        "significance": "反映医疗机构合理诊治运动并发症的措施执行情况。提高对帕金森病运动并发症准确、及时识别的比例，提高治疗水平。",
+        "other": "运动并发症的筛查、评估方法参照国际运动障碍疾病协会推荐量表。",
+        "instruction_standard": "你是一位专业的医生，请你判断住院帕金森病患者的病历是否符合进行运动并发症筛查的要求，评估方法参照国际运动障碍疾病协会推荐量表。",
+        "numerator": "进行运动并发症筛查的住院帕金森病患者",
+        "denominator": "同期住院帕金森病患者总数",
+        "question_rule": "是否符合进行运动并发症筛查的要求。评估方法参照国际运动障碍疾病协会推荐量表。",
+        "facts": [
+            "已进行MDS-UPDRS量表评估 = True/False",
+            "已进行UPDRS量表评估 = True/False",
+            "已进行运动并发筛查评估 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则MDS-UPDRS评估已完成。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果Fact 2为真，则UPDRS评估已完成。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果Fact 3为真，则运动并发筛查评估已完成。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真或Logical Rule 3为真，则患者符合进行运动并发症筛查的要求。。",
+                "symbolic language": "Fact 1 ∨ Fact 2 ∨ Fact 3"
+            }
+        ]
+    },
+    "帕金森病（PD）质控指标_住院帕金森病体位性低血压筛查率": {
+        "definition": "单位时间内，进行体位性低血压筛查的住院帕金森病患者数占同期住院治疗帕金森病患者总数的比例。",
+        "formula": "住院帕金森病体位性低血压筛查率=进行体位性低血压筛查的住院帕金森病患者数×100%同期住院治疗帕金森病患者总数",
+        "significance": "反映医疗机构对于帕金森病患者合并体位性低血压的规范性诊疗措施执行情况。提高对帕金森病合并体位性低血压的准确、及时识别比例，提高患者生活质量。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断帕金森病患者的病历是否符合进行体位性低血压筛查的要求。",
+        "numerator": "进行体位性低血压筛查的住院帕金森病患者",
+        "denominator": "同期住院治疗帕金森病患者总数",
+        "question_rule": "是否符合进行体位性低血压筛查的要求。",
+        "facts": [
+            "患者有体位性低血压症状 = True/False。",
+            "患者在体位变化时血压显著下降 = True/False。",
+            "患者有其他体位性低血压风险因素 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者有体位性低血压症状或在体位变化时血压显著下降，则需要筛查。",
+                "symbolic language": "Fact 1  ∨ Fact 2"
+            },
+            {
+                "natural language": "如果患者有其他体位性低血压风险因素，则可能需要筛查。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果（Logical Rule 1为真或Logical Rule 2为真），则患者符合进行体位性低血压筛查的要求。",
+                "symbolic language": "(Fact 1 ∨ Fact 2）∨ Fact 3"
+            }
+        ]
+    },
+    "帕金森病（PD）质控指标_住院帕金森病患者焦虑症状和抑郁症状筛查率": {
+        "definition": "单位时间内，进行焦虑症状和抑郁症状筛查的住院帕金森病患者数占同期住院帕金森病患者总数的比例。",
+        "formula": "住院帕金森病患者焦虑症状和抑郁症状筛查率=进行焦虑症状和抑郁症状筛查的住院帕金森病患者数×100%同期住院帕金森病患者总数",
+        "significance": "反映医疗机构对于帕金森病合并焦虑症状和抑郁症状的规范性诊疗措施执行情况。提高对帕金森病合并焦虑症状或抑郁症状的准确、及时识别比例，提高患者生活质量。",
+        "other": "对住院帕金森病患者进行心理筛查主要包括焦虑和抑郁的筛查，参照国际运动障碍疾病协会推荐量表。",
+        "instruction_standard": "你是一位专业的医生，请你判断住院帕金森病患者的病历是否符合进行焦虑症状和抑郁症状筛查的要求。",
+        "numerator": "进行焦虑症状和抑郁症状筛查的住院帕金森病患者",
+        "denominator": "同期住院帕金森病患者总数",
+        "question_rule": "是否符合进行焦虑症状和抑郁症状筛查的要求。",
+        "facts": [
+            "焦虑症状筛查 = True/False（假设值）。",
+            "抑郁症状筛查 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则完成焦虑症状筛查。",
+                "symbolic language": " Fact 1"
+            },
+            {
+                "natural language": "如果且Fact 2为真，则完成抑郁症状筛查。",
+                "symbolic language": " Fact 2 = True"
+            },
+            {
+                "natural language": "如果且Logical Rules 1 且 Logical Rules 2 合进行焦虑症状和抑郁症状筛查的要求。",
+                "symbolic language": " Fact 1 ∧ Fact 2"
+            }
+        ]
+    },
+    "剖宫产（CS）_剖宫产足月新生儿5分钟Apgar评分≤7分发生率": {
+        "definition": "单位时间内，剖宫产分娩的足月新生儿（分娩孕周≥37周）出生后5分钟Apgar评分≤7分例数占同期剖宫产分娩的足月活产儿总例数的比例。",
+        "formula": "剖宫产足月新生儿5分钟Apgar评分≤7分发生率=剖宫产足月新生儿5分钟Apgar评分≤7分例数同期剖宫产手术足月活产儿总例数×100%",
+        "significance": "反映剖宫产分娩的新生儿窒息高危因素的产前识别及产时复苏能力。",
+        "other": "足月活产儿定义及Apgar评分具体标准参考《产科专业医疗质量控制指标（版）》",
+        "instruction_standard": "你是一位专业的医生，请你判断剖宫产足月新生儿的患者病历是否符合5分钟Apgar评分≤7分的要求。",
+        "numerator": "剖宫产足月新生儿5分钟Apgar评分≤7分",
+        "denominator": "同期剖宫产手术足月活产儿总例数",
+        "question_rule": "是否符合5分钟Apgar评分≤7分的要求。",
+        "facts": [
+            "5分钟Apgar评分 = C（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果C <= 7，则5分钟Apgar评分符合出院要求。",
+                "symbolic language": "C <= 7"
+            }
+        ]
+    },
+    "剖宫产（CS）_剖宫产产后出血发生率": {
+        "definition": "单位时间内，剖宫产手术发生产后出血的产妇例数占同期剖宫产分娩产妇总例数的比例。",
+        "formula": "剖宫产产后出血发生率=剖宫产产后出血产妇例数/同期剖宫产分娩产妇总例数",
+        "significance": "剖宫产产后出血是妊娠严重并发症，反映产科质量的重要过程性指标。",
+        "other": "剖宫产产后出血是指胎儿娩出24小时内，剖宫产分娩产妇出血量≥1000ml。",
+        "instruction_standard": "你是一位专业的医生，请你判断剖宫产产后出血产妇的病历是否符合出血量≥1000ml的要求。",
+        "numerator": "剖宫产产后出血产妇",
+        "denominator": "同期剖宫产分娩产妇总例数",
+        "question_rule": "是否符合剖宫产产后出血量≥1000ml的要求。",
+        "facts": [
+            "剖宫产后总出血量 = V（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果V ≥ 1000ml，则出血量符合≥1000ml的要求。",
+                "symbolic language": "V ≥ 1000"
+            }
+        ]
+    },
+    "剖宫产（CS）_剖宫产产后出血产妇输血率": {
+        "definition": "单位时间内，剖宫产手术发生产后出血实施输血治疗（含自体输血）的产妇例数占同期剖宫产手术发生产后出血产妇总例数的比例。",
+        "formula": "剖宫产手术产后出血产妇输血率=剖宫产手术产后出血输血治疗产妇例数/同期剖宫产手术产后出血产妇总例数",
+        "significance": "反映剖宫产手术产后出血的发生情况及输血治疗的实施情况。",
+        "other": "统计术中或/及术后输血情况，包括全血或浓缩红细胞。",
+        "instruction_standard": "你是一位专业的医生，请你判断剖宫产手术产后出血输血治疗产妇的病历是否符合术中或/及术后输血情况的统计要求，包括全血或浓缩红细胞的使用情况。",
+        "numerator": "剖宫产手术产后出血输血治疗产妇",
+        "denominator": "同期剖宫产手术产后出血产妇总例数",
+        "question_rule": "是否符合术中或/及术后输血情况的统计要求，包括全血或浓缩红细胞的使用情况。",
+        "facts": [
+            "术中输血 = True/False（假设值）。",
+            "术后输血 = True/False（假设值）。",
+            "术中全血使用量 = M（假设值）。",
+            "术中浓缩红细胞使用量 = N（假设值）。",
+            "术后全血使用量 = P（假设值）。",
+            "术后浓缩红细胞使用量 = Q（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果术中输血为真，则记录术中全血和浓缩红细胞的使用情况。",
+                "symbolic language": "术中输血 → (M ≥ 0 ∧ N ≥ 0)"
+            },
+            {
+                "natural language": "如果术后输血为真，则记录术后全血和浓缩红细胞的使用情况。",
+                "symbolic language": "术后输血 → (P ≥ 0 ∧ Q ≥ 0)"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则病历符合输血统计要求。",
+                "symbolic language": " (术中输血 ∧ (M ≥ 0 ∨ N ≥ 0)) ∨ (术后输血 ∧ (P ≥ 0 ∨ Q ≥ 0))] "
+            }
+        ]
+    },
+    "乳腺癌_乳腺癌患者首次治疗前临床TNM分期诊断率": {
+        "definition": "首次治疗前完成临床TNM分期诊断的乳腺癌患者数占接受首次治疗的乳腺癌患者总数的比例。",
+        "formula": "乳腺癌患者首次治疗前临床TNM分期诊断率=首次治疗前完成临床TNM分期诊断的乳腺癌患者数/同期接受首次治疗的乳腺癌患者总数",
+        "significance": "治疗前全面评价病情是肿瘤规范化治疗的基础。",
+        "other": "1.首次治疗指针对肿瘤开展的手术、放疗、化疗、靶向治疗、内分泌治疗、免疫治疗等，不包括为明确诊断或病情而采取的穿刺、活检、检查等诊疗措施。下同。\n2.分期方法参见国家卫生健康委发布的《乳腺癌诊疗指南（2022年版）》",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前乳腺癌患者的病历是否符合完成临床TNM分期诊断的要求。1.首次治疗指针对肿瘤开展的手术、放疗、化疗、靶向治疗、内分泌治疗、免疫治疗等，不包括为明确诊断或病情而采取的穿刺、活检、检查等诊疗措施。下同。\n2.分期方法参见国家卫生健康委发布的《乳腺癌诊疗指南（2022年版）》",
+        "numerator": "首次治疗前完成临床TNM分期诊断的乳腺癌患者",
+        "denominator": "同期接受首次治疗的乳腺癌患者总数",
+        "question_rule": "是否符合完成临床TNM分期诊断的要求。分期方法参见国家卫生健康委发布的《乳腺癌诊疗指南（2022年版）》。",
+        "facts": [
+            "TNM分期已完成 = True/False。",
+            "TNM分期信息 = (T, N, M)。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为True，则表示已完成TNM分期。",
+                "symbolic language": "TNM分期已完成 = True"
+            },
+            {
+                "natural language": "如果TNM分期信息(T, N, M)存在且完整，则表示分期信息有效。",
+                "symbolic language": "T ≠ null ∧ N ≠ null ∧ M ≠ null"
+            },
+            {
+                "natural language": "如果Logical Rule 1、Logical Rule 2全部为真，则患者病历符合完成临床TNM分期诊断的要求。",
+                "symbolic language": " (TNM分期已完成 = True) ∧ (T ≠ null ∧ N ≠ null ∧ M ≠ null) "
+            }
+        ]
+    },
+    "社区获得性肺炎（成人，首次住院）（CAP）质控指标_住院成人社区获得性肺炎（CAP）患者进行CAP严重程度评估的比例（核心指标）": {
+        "definition": "单位时间内，进行了CAP严重程度评估的住院CAP患者数占同期住院CAP患者总数的比例。",
+        "formula": "住院CAP患者进行CAP严重程度评估的比例=进行了CAP严重程度评估的住院CAP患者数×100%同期住院CAP患者总数",
+        "significance": "反映CAP患者诊断的规范性。",
+        "other": "评分：CURB-65 评分\n评分项目：\n（1）意识障碍\n（2）尿素氮 > 7 mmol/L\n（3）呼吸频率 ≥ 30 次/min\n（4）收缩压 < 90 mmHg 或舒张压 < 60 mmHg\n（5）年龄 ≥ 65 岁\n分级规则：\n符合 5 项得 1 分\n风险评分：0-1 分：低危；2 分：中危；3-5 分：高危\n评分：CRB-65 评分\n评分项目：\n（1）意识障碍\n（2）呼吸频率 ≥ 30 次/min\n（3）收缩压 < 90 mmHg 或舒张压 < 60 mmHg\n（4）年龄 ≥ 65 岁\n分级规则：\n符合 4 项得 1 分\n风险评分：0-1 分：低危；2 分：中危；大于等于3 分：高危\n评分：PSI 评分\n评分项目：\n（1）居住在养老院 +10分\n（2）基础疾病（肿瘤 + 30 分；肝病 + 20 分；充血性心力衰竭 + 10 分；脑血管疾病 +10 分；肾病 +10 分）\n（3）体征：意识状态改变 +20分；呼吸频率 ≥ 30 次/min + 20 分；收缩压 < 90 mmHg + 20 分；体温<35℃ ≥ 40°C + 15 分；脉搏≥125次/min +10分\n（4）实验室检查：动脉血pH< 7.35 +30分；血尿素氮≥11mmol/L +20分；血钠<130mmol/L +20分；尿糖 > 14 mmol/L + 10 分；红细胞积压（Hct）<30% +10分；PaO2<60mmHg（或指氧饱和度<90%）+10分\n（5）胸部影像：胸膜积液 + 10 分\n分级规则：\n低级：I级（＜50岁，无基础疾病）；II级（≤70岁）；III级（71-90分）；中危：IV级（91-130分）；高危：V级（>130分）；IV和V级需要住院治疗",
+        "instruction_standard": "你是一位专业的医生，请你判断住院CAP患者的病历是否符合进行了CAP严重程度评估的要求。请根据CURB-65、CRB-65和PSI评分进行评估。",
+        "numerator": "进行了CAP严重程度评估的住院CAP患者",
+        "denominator": "同期住院CAP患者总数",
+        "question_rule": "是否符合进行了CAP严重程度评估的要求。评估工具包括：CURB-65、CRB-65和PSI评分。",
+        "facts": [
+            "是否进行了CURB-65评分 = True/False。",
+            "是否进行了CRB-65评分 = True/False。",
+            "是否进行了PSI评分 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果进行了CURB-65评分，则符合CAP严重程度评估要求。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果进行了CRB-65评分，则符合CAP严重程度评估要求。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果进行了PSI评分，则符合CAP严重程度评估要求。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真或Logical Rule 3为真，则患者符合CAP严重程度评估要求。",
+                "symbolic language": " Fact 1 ∨ Fact 2 ∨ Fact 3"
+            }
+        ]
+    },
+    "社区获得性肺炎（成人，首次住院）（CAP）质控指标_低危CAP患者住院比例": {
+        "definition": "单位时间内，住院低危CAP患者数占同期住院CAP患者总数的比例。",
+        "formula": "低危CAP患者住院比例=住院低危CAP患者数×100%同期住院CAP患者总数",
+        "significance": "反映对CAP患者住院指征的把握能力及对医疗资源的管理能力。根据CAP病情严重程度评估，低危患者应该门诊治疗。低危CAP患者住院治疗意味着占用有限的病床资源，造成不必要的医疗花费。",
+        "other": "低危CAP患者指的是采用上述某一CAP严重程度评分系统进行评估后死亡风险归为低危的患者，包括CURB-65评分0-1分、或者CRB评分0分、或者PSI评分≤90分的患者。",
+        "instruction_standard": "你是一位专业的医生，请你判断住院CAP患者的病历是否符合以下要求：患者经过CAP严重程度评分系统评估后，死亡风险归为低危，包括CURB-65评分0-1分、CRB评分0分、或者PSI评分≤90分的患者。",
+        "numerator": "住院低危CAP患者数",
+        "denominator": "同期住院CAP患者总数",
+        "question_rule": "是否符合以下要求：患者经过CAP严重程度评分系统评估后，死亡风险归为低危，包括CURB-65评分0-1分、CRB评分0分、或者PSI评分≤90分的患者。",
+        "facts": [
+            "患者的CURB-65评分 = C（假设值）。",
+            "患者的CRB评分 = R（假设值）。",
+            "患者的PSI评分 = P（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果C为0或1，则CURB-65评分符合低危要求。",
+                "symbolic language": "C ∈ {0, 1}"
+            },
+            {
+                "natural language": "如果R为0，则CRB评分符合低危要求。",
+                "symbolic language": "R = 0"
+            },
+            {
+                "natural language": "如果P ≤ 90，则PSI评分符合低危要求。",
+                "symbolic language": "P ≤ 90"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真或Logical Rule 3为真，则患者符合低危评分要求。",
+                "symbolic language": " (C ∈ {0, 1}) ∨ (R = 0) ∨ (P ≤ 90)"
+            }
+        ]
+    },
+    "糖尿病_住院患者慢性并发症评估率": {
+        "definition": "单位时间内，糖尿病住院患者完成慢性并发症评估的人次数占同期糖尿病住院患者总人次数的比例。",
+        "formula": "糖尿病住院患者慢性并发症评估率=糖尿病住院患者完成慢性并发症评估的人次数/同期糖尿病住院患者总人次数",
+        "significance": "反映糖尿病患者住院期间规范化诊疗能力",
+        "other": "尿蛋白/肌酐、24h尿蛋白定量、预估肾小球滤过率、眼底检查、神经传导速度、心脏超声、颈动脉和下肢血管彩超等。",
+        "instruction_standard": "你是一位专业的医生，请你判断糖尿病住院患者的病历是否符合完成慢性并发症评估的要求，包括尿蛋白/肌酐、24小时尿蛋白定量、预估肾小球滤过率、眼底检查、神经传导速度、心脏超声、颈动脉和下肢血管彩超等。",
+        "numerator": "糖尿病住院患者完成慢性并发症评估",
+        "denominator": "同期糖尿病住院患者总人次数",
+        "question_rule": "是否符合完成慢性并发症评估的要求，包括尿蛋白/肌酐、24小时尿蛋白定量、预估肾小球滤过率、眼底检查、神经传导速度、心脏超声、颈动脉和下肢血管彩超等。",
+        "facts": [
+            "已完成尿蛋白/肌酐比值测定 = True/False。",
+            "已完成24小时尿蛋白定量测定 = True/False。",
+            "已完成预估肾小球滤过率测定 = True/False。",
+            "已完成眼底检查 = True/False。",
+            "已完成神经传导速度测试 = True/False。",
+            "已完成心脏超声检查 = True/False。",
+            "已完成颈动脉和下肢血管彩超检查 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则尿蛋白/肌酐比值测定已完成。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果Fact 2为真，则24小时尿蛋白定量测定已完成。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果Fact 3为真，则预估肾小球滤过率测定已完成。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果Fact 4为真，则眼底检查已完成。",
+                "symbolic language": "Fact 4 = True"
+            },
+            {
+                "natural language": "如果Fact 5为真，则神经传导速度测试已完成。",
+                "symbolic language": "Fact 5 = True"
+            },
+            {
+                "natural language": "如果Fact 6为真，则心脏超声检查已完成。",
+                "symbolic language": "Fact 6 = True"
+            },
+            {
+                "natural language": "如果Fact 7为真，则颈动脉和下肢血管彩超检查已完成。",
+                "symbolic language": "Fact 7 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1到Logical Rule 7均为真，则患者已完成所有慢性并发症评估。",
+                "symbolic language": "Fact 1 ∧ Fact 2 ∧ Fact 3 ∧ Fact 4 ∧ Fact 5 ∧ Fact 6 ∧ Fact 7"
+            }
+        ]
+    },
+    "胃癌质控指标_I-III期胃癌患者手术治疗术中淋巴结清扫充分率(核心指标)": {
+        "definition": "I-III期手术治疗术中淋巴结清扫总数≥16枚的胃癌患者数占接受手术治疗的I-III期胃癌患者总数的比例。",
+        "formula": "I—III期胃癌患者手术治疗术中淋巴结清扫充分率=I−III期手术治疗术中淋巴结清扫总数≥16枚的胃癌患者数/同期接受手术治疗的I−III期胃癌患者总数×100%",
+        "significance": "淋巴结清扫是术后准确病理分期和达到根治性切除的重要保证，反映胃癌手术规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断I-III期手术治疗术胃癌患者的病历是否符合中淋巴结清扫总数≥16枚的要求。",
+        "numerator": "I-III期手术治疗术中淋巴结清扫总数≥16枚的胃癌患者",
+        "denominator": "同期接受手术治疗的I-III期胃癌患者总数",
+        "question_rule": "是否符合中淋巴结清扫总数≥16枚的要求。",
+        "facts": [
+            "手术中清扫的淋巴结总数 = N（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果N ≥ 16，则淋巴结清扫总数符合要求。",
+                "symbolic language": "N ≥ 16"
+            }
+        ]
+    },
+    "胃癌质控指标_胃癌患者首次治疗前临床TNM分期诊断率": {
+        "definition": "首次治疗前完成临床TNM分期诊断的胃癌患者数占接受首次治疗的胃癌患者总\n数的比例。",
+        "formula": "胃癌患者首次治疗前临床TNM分期诊断率=首次治疗前完成临床TNM分期诊断的胃癌患者数×100%同期接受首次治疗的胃癌患者总数",
+        "significance": "治疗前全面评价病情是肿瘤规范化治疗的基础。",
+        "other": "1.首次治疗指针对肿瘤开展的手术、放疗、化疗、靶向治疗、免疫治疗等治疗，\n不包括为明确诊断或病情而采取的穿刺、活检、检查等诊疗措施。下同。\n2.分期方法参见国家卫生健康委发布的《胃癌诊疗指南（2022年版）》。下同。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前胃癌患者病历是否符合完成临床TNM分期诊断的要求。",
+        "numerator": "首次治疗前完成临床TNM分期诊断的胃癌患者",
+        "denominator": "同期接受首次治疗的胃癌患者总数",
+        "question_rule": "是否符合完成临床TNM分期诊断的要求。",
+        "facts": [
+            "原发肿瘤大小和局部扩展 = T（假设值）。",
+            "区域淋巴结受累情况 = N（假设值）。",
+            "远处转移情况 = M（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果T分期已确定，则满足T分期要求。",
+                "symbolic language": "T ≠ 未知"
+            },
+            {
+                "natural language": "如果N分期已确定，则满足N分期要求。",
+                "symbolic language": "N ≠ 未知"
+            },
+            {
+                "natural language": "如果M分期已确定，则满足M分期要求。",
+                "symbolic language": "M ≠ 未知"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真，则患者符合完成临床TNM分期诊断的要求。",
+                "symbolic language": " (T ≠ 未知) ∧ (N ≠ 未知) ∧ (M ≠ 未知)"
+            }
+        ]
+    },
+    "胃癌质控指标_胃癌患者术后病理TNM分期率": {
+        "definition": "手术治疗后完成病理TNM分期的胃癌患者数占接受手术治疗的胃癌患者总数的\n比例。",
+        "formula": "胃癌患者术后病理TNM分期率=手术治疗后完成病理TNM分期的胃癌患者数×100%同期接受手术治疗的胃癌患者总数",
+        "significance": "反映胃癌诊疗的规范性",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断手术治疗后胃癌患者的病历是否符合完成病理TNM分期的要求。",
+        "numerator": "手术治疗后完成病理TNM分期的胃癌患者",
+        "denominator": "同期接受手术治疗的胃癌患者总数",
+        "question_rule": "是否符合完成病理TNM分期的要求。",
+        "facts": [
+            "病理报告中的T分期 = T1/T2/T3/T4（假设值）。",
+            "病理报告中的N分期 = N0/N1/N2/N3（假设值）。",
+            "病理报告中的M分期 = M0/M1（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果存在T分期，则T分期信息完整。",
+                "symbolic language": "T分期 ≠ null"
+            },
+            {
+                "natural language": "如果存在N分期，则N分期信息完整。",
+                "symbolic language": "N分期 ≠ null"
+            },
+            {
+                "natural language": "如果存在M分期，则M分期信息完整。",
+                "symbolic language": "M分期 ≠ null"
+            },
+            {
+                "natural language": "如果Logical Rule 1、Logical Rule 2和Logical Rule 3都为真，则病理TNM分期信息完整。",
+                "symbolic language": " (T分期 ≠ null) ∧ (N分期 ≠ null) ∧ (M分期 ≠ null)] "
+            }
+        ]
+    },
+    "哮喘（成人，急性发作，住院）（CAC）_病情严重程度评估率": {
+        "definition": "单位时间内，进行病情严重程度分级的支气管哮喘急性发作患者例数占同期住院支气管哮喘患者总例数的比例。",
+        "formula": "病情严重程度评估率=进行病情严重程度分级的支气管哮喘患者例数/同期住院支气管哮喘患者总例数",
+        "significance": "急性发作依病情轻重分轻度、中度、重度和危重度四个等级，是治疗策略选择的重要依据。",
+        "other": "无",
+        "instruction_standard": "你是一位专业的医生，请你判断支气管哮喘患者的病历是否符合进行病情严重程度分级的要求。",
+        "numerator": "进行病情严重程度分级的支气管哮喘患者",
+        "denominator": "同期住院支气管哮喘患者总例数",
+        "question_rule": "是否符合进行病情严重程度分级的要求。",
+        "facts": [
+            "进行严重性评估 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果进行了病情严重程度，则认为符合要求",
+                "symbolic language": "Fact 1 = True  "
+            }
+        ]
+    },
+    "消化道出血_消化道出血健康指导完成率": {
+        "definition": "单位时间内，完成消化道出血健康指导的出院患者例数占同期消化道出血住院患者总例数的比例。",
+        "formula": "消化道出血健康指导完成率=完成消化道出血健康指导的出院患者例数/同期消化道出血住院患者总例数",
+        "significance": "反映消化道出血的健康指导水平。",
+        "other": "戒酒、饮食指导、生活习惯改善、用药安全性教育等对于避免消化道出血复发具有积极意义。",
+        "instruction_standard": "你是一位专业的医生，请你判断消化道出血的患者病历是否符合完成消化道出血健康指导的出院要求，包括戒酒、饮食指导、生活习惯改善和用药安全性教育等内容。",
+        "numerator": "完成消化道出血健康指导的出院患者",
+        "denominator": "同期消化道出血住院患者总例数",
+        "question_rule": "是否符合完成消化道出血健康指导的出院要求，包括戒酒、饮食指导、生活习惯改善和用药安全性教育等内容。",
+        "facts": [
+            "患者接受了戒酒指导 = True/False。",
+            "患者接受了饮食指导 = True/False。",
+            "患者接受了生活习惯改善指导 = True/False。",
+            "患者接受了用药安全性教育 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者接受了戒酒指导，则戒酒指导要求满足。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果患者接受了饮食指导，则饮食指导要求满足。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果患者接受了生活习惯改善指导，则生活习惯改善要求满足。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果患者接受了用药安全性教育，则用药安全性教育要求满足。",
+                "symbolic language": "Fact 4 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1、Logical Rule 2、Logical Rule 3和Logical Rule 4都为真，则患者符合出院健康指导要求。",
+                "symbolic language": " Fact 1 ∧ Fact 2 ∧ Fact 3 ∧ Fact 4 "
+            }
+        ]
+    },
+    "心力衰竭（HF）质控指标_心力衰竭伴容量超负荷患者住院期间利尿剂治疗率": {
+        "definition": "单位时间内，住院期间接受利尿剂治疗的心力衰竭伴容量超负荷患者数，占同期心力衰竭伴容量超负荷患者总数的比例。",
+        "formula": "心力衰竭伴容量超负荷患者住院期间利尿剂治疗率=住院期间接受利尿剂治疗的心力衰竭伴容量超负荷患者数/同期心力衰竭伴容量超负荷患者总数",
+        "significance": "评价医院救治心力衰竭患者的规范性。",
+        "other": "1.典型心衰淤血症状：呼吸困难、夜间阵发性呼吸困难或平卧后干咳、静息呼吸困难或端坐呼吸等。\\\n2.颈外静脉怒张的顶点到胸骨角的垂直距离加上5cm为颈静脉压力值，>8cm时提示容量超负荷。\\\n3.肝颈静脉回流征为阳性。\\\n4.水肿，特别是双下肢水肿或身体低垂部位水肿。\\\n5.体质量、尿量、液体净平衡能客观反映容量负荷的动态变化，短期体质量明显增加，尿量减少、入量大于出量(液体正平衡)提示液体潴留。\\\n6.中心静脉压正常值范围为5～12cmH2O，监测中心静脉压应同时监测心输出量及组织灌注，低血压伴肺毛细血管楔压<14mmHg，适当补液后，如果血压回升、尿量增加、肺部存在湿啰音、干啰音、喘鸣音，提示存在容量不足。\\\n7.脉搏指示持续心输出量监测：可测定反映心脏前负荷和肺水肿的指标，其测定的容量性指标敏感性高于压力性指标。\\\n8.X线胸片：肺上叶血管扩张、肺淤血、肺泡间质水肿、胸腔积液等征象提示容量超负荷。\\\n9.血液浓缩指标：红细胞比容、血红蛋白浓度、白蛋白水平、总蛋白水平、血钠等进行性升高，血尿素氮/血肌酐比值>20∶1，尿钠、氯浓度降低，尿肌酐/血肌酐、尿比重或渗透压升高等均提示容量不足。\\\n10.利钠肽指标：根据利钠肽进行容量评估时一定要动态监测利钠肽水平，确定患者湿体质量(容量负荷过重时)和最佳容量对应的利钠肽值。\\\n11.超声评估下腔静脉塌陷指数下降、下腔静脉直径增宽、出现肺部B线等提示容量超负荷。\\",
+        "instruction_standard": "你是一位专业的医生，请你判断心力衰竭伴容量超负荷患者的病历是否符合住院期间接受利尿剂治疗的要求。",
+        "numerator": "住院期间接受利尿剂治疗的心力衰竭伴容量超负荷患者",
+        "denominator": "同期心力衰竭伴容量超负荷患者总数",
+        "question_rule": "是否符合住院期间接受利尿剂治疗的要求。",
+        "facts": [
+            "患者表现出容量超负荷的症状 = True/False",
+            "患者在住院期间接受了利尿剂治疗 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者出现容量超负荷症状且则接受利尿剂治疗，则认为符合治疗要求",
+                "symbolic language": " Fact 1 ∧ Fact 2"
+            }
+        ]
+    },
+    "心律失常介入治疗技术质控指标_阵发性室上性心动过速（PSVT）导管消融治疗成功率（核心指标）": {
+        "definition": "单位时间内，行PSVT导管消融治疗成功的患者数，占同期行PSVT导管消融治疗的患者总数的比例。",
+        "formula": "阵发性室上性心动过速（PSVT）导管消融治疗成功率=行PSVT导管消融治疗成功的患者数/同期行PSVT导管消融治疗的患者总数",
+        "significance": "评价手术诊疗质量情况。",
+        "other": "1）阵发性房室结折返性心动过速：消融后，基础状态和异丙激发，都不再能诱发心动过速；\n2）阵发性房室折返性心动过速，旁道前传和逆传消失，基础状态和异丙激发，都不再能诱发心动过速",
+        "instruction_standard": "你是一位专业的医生，请你判断阵发性房室结折返性心动过速和阵发性房室折返性心动过速患者的病历是否符合行PSVT导管消融治疗成功的要求。1）阵发性房室结折返性心动过速：消融后，基础状态和异丙激发，都不再能诱发心动过速；\n2）阵发性房室折返性心动过速，旁道前传和逆传消失，基础状态和异丙激发，都不再能诱发心动过速",
+        "numerator": "行PSVT导管消融治疗成功的患者",
+        "denominator": "同期行PSVT导管消融治疗的患者总数",
+        "question_rule": "是否符合行PSVT导管消融治疗成功的要求。1）阵发性房室结折返性心动过速：消融后，基础状态和异丙激发，都不再能诱发心动过速；2）阵发性房室折返性心动过速，旁道前传和逆传消失，基础状态和异丙激发，都不再能诱发心动过速。",
+        "facts": [
+            "阵发性房室结折返性心动过速消融后基础状态不能诱发心动过速 = True/False",
+            "阵发性房室结折返性心动过速消融后异丙激发不能诱发心动过速 = True/False",
+            "阵发性房室折返性心动过速消融后旁道前传消失 = True/False",
+            "阵发性房室折返性心动过速消融后旁道逆传消失 = True/False",
+            "阵发性房室折返性心动过速消融后基础状态不能诱发心动过速 = True/False",
+            "阵发性房室折返性心动过速消融后异丙激发不能诱发心动过速 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真且Fact 2为真，则阵发性房室结折返性心动过速符合治疗成功要求。",
+                "symbolic language": "Fact 1 ∧ Fact 2"
+            },
+            {
+                "natural language": "如果Fact 3为真且Fact 4为真且Fact 5为真且Fact 6为真，则阵发性房室折返性心动过速符合治疗成功要求。",
+                "symbolic language": "Fact 3 ∧ Fact 4 ∧ Fact 5 ∧ Fact 6"
+            },
+            {
+                "natural language": "如果logical rules1或logical rules2为真，则符合行PSVT导管消融治疗成功的要求",
+                "symbolic language": "（Fact 1 ∧ Fact 2）∨（Fact 3 ∧ Fact 4 ∧ Fact 5 ∧ Fact 6）"
+            }
+        ]
+    },
+    "子宫肌瘤（手术治疗）（UM）_术前评估率": {
+        "definition": "单位时间内，术前评估完整的肌瘤患者例数占同期接受手术的肌瘤患者总例数的比例。",
+        "formula": "术前评估率=术前评估完整的肌瘤患者例数/同期接受手术的肌瘤患者总例数",
+        "significance": "反映医疗机构实施子宫肌瘤手术术前评估的规范性。",
+        "other": "术前必完成的评估项目：妇科检查、B超、MRI（可选）、宫颈TCT（有性生活者）、血常规、尿常规、凝血功能、肝肾功能、血型、血清电解质、心电图和胸片/肺CT、感染性标志物。",
+        "instruction_standard": "你是一位专业的医生，请你判断肌瘤患者的病历是否符合术前评估完整的要求。请确认以下评估项目是否已完成：妇科检查、B超、MRI（可选）、宫颈TCT（有性生活者）、血常规、尿常规、凝血功能、肝肾功能、血型、血清电解质、心电图和胸片/肺CT、感染性标志物。",
+        "numerator": "术前评估完整的肌瘤患者",
+        "denominator": "同期接受手术的肌瘤患者总例数",
+        "question_rule": "是否符合术前评估完整的要求。请确认以下评估项目是否已完成：妇科检查、B超、MRI（可选）、宫颈TCT（有性生活者）、血常规、尿常规、凝血功能、肝肾功能、血型、血清电解质、心电图和胸片/肺CT、感染性标志物。",
+        "facts": [
+            "妇科检查 = 已完成/未完成。",
+            "B超 = 已完成/未完成。",
+            "MRI = 已完成/未完成（可选）。",
+            "宫颈TCT = 已完成/未完成（有性生活者）。",
+            "血常规 = 已完成/未完成。",
+            "尿常规 = 已完成/未完成。",
+            "凝血功能 = 已完成/未完成。",
+            "肝肾功能 = 已完成/未完成。",
+            "血型 = 已完成/未完成。",
+            "血清电解质 = 已完成/未完成。",
+            "心电图 = 已完成/未完成。",
+            "胸片/肺CT = 已完成/未完成。",
+            "感染性标志物 = 已完成/未完成。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果妇科检查已完成，则符合要求。",
+                "symbolic language": "妇科检查 = 已完成"
+            },
+            {
+                "natural language": "如果B超已完成，则符合要求。",
+                "symbolic language": "B超 = 已完成"
+            },
+            {
+                "natural language": "如果MRI已完成或未完成（可选），则符合要求。",
+                "symbolic language": "MRI = 已完成 ∨ MRI = 未完成"
+            },
+            {
+                "natural language": "如果宫颈TCT已完成（有性生活者），则符合要求。",
+                "symbolic language": "宫颈TCT = 已完成"
+            },
+            {
+                "natural language": "如果血常规已完成，则符合要求。",
+                "symbolic language": "血常规 = 已完成"
+            },
+            {
+                "natural language": "如果尿常规已完成，则符合要求。",
+                "symbolic language": "尿常规 = 已完成"
+            },
+            {
+                "natural language": "如果凝血功能已完成，则符合要求。",
+                "symbolic language": "凝血功能 = 已完成"
+            },
+            {
+                "natural language": "如果肝肾功能已完成，则符合要求。",
+                "symbolic language": "肝肾功能 = 已完成"
+            },
+            {
+                "natural language": "如果血型已完成，则符合要求。",
+                "symbolic language": "血型 = 已完成"
+            },
+            {
+                "natural language": "如果血清电解质已完成，则符合要求。",
+                "symbolic language": "血清电解质 = 已完成"
+            },
+            {
+                "natural language": "如果心电图已完成，则符合要求。",
+                "symbolic language": "心电图 = 已完成"
+            },
+            {
+                "natural language": "如果胸片/肺CT已完成，则符合要求。",
+                "symbolic language": "胸片/肺CT = 已完成"
+            },
+            {
+                "natural language": "如果感染性标志物已完成，则符合要求。",
+                "symbolic language": "感染性标志物 = 已完成"
+            },
+            {
+                "natural language": "如果所有Logical Rules均为真（即所有必要检查项目均已完成），则患者的病历符合术前评估完整的要求。",
+                "symbolic language": "Logical Rule 1 ∧ Logical Rule 2 ∧ Logical Rule 3 ∧ Logical Rule 4 ∧ Logical Rule 5 ∧ Logical Rule 6 ∧ Logical Rule 7 ∧ Logical Rule 8 ∧ Logical Rule 9 ∧ Logical Rule 10 ∧ Logical Rule 11 ∧ Logical Rule 12 ∧ Logical Rule 13 "
+            }
+        ]
+    },
+    "子宫肌瘤（手术治疗）（UM）_手术指征符合率": {
+        "definition": "单位时间内，手术指征符合规范的肌瘤患者例数占同期接受手术的肌瘤患者总例数的比例。",
+        "formula": "手术指征符合率=手术指征符合规范的肌瘤患者例数/同期接受手术的肌瘤患者总例数",
+        "significance": "反映医疗机构实施子宫肌瘤手术指征掌握的规范性。",
+        "other": "手术指征需符合以下几条之一：（1）子宫肌瘤合并月经过多或异常出血甚至导致贫血；或出现压迫症状；（2）因肌瘤造成不孕或复发性流产；（3）子宫肌瘤患者准备妊娠时若肌瘤直径≥4cm可考虑剔除术；（4）绝经后肌瘤仍生长；（5）有蒂肌瘤扭转引起的急性腹痛；（6）粘膜下肌瘤；（7）肌瘤短期内生长迅速，且影像学检查提示有变性可能。",
+        "instruction_standard": "你是一位专业的医生，请你判断肌瘤患者的病历是否符合手术指征符合规范的要求。手术指征需符合以下几条之一：（1）子宫肌瘤合并月经过多或异常出血甚至导致贫血；或出现压迫症状；（2）因肌瘤造成不孕或复发性流产；（3）子宫肌瘤患者准备妊娠时若肌瘤直径≥4cm可考虑剔除术；（4）绝经后肌瘤仍生长；（5）有蒂肌瘤扭转引起的急性腹痛；（6）粘膜下肌瘤；（7）肌瘤短期内生长迅速，且影像学检查提示有变性可能。",
+        "numerator": "手术指征符合规范的肌瘤患者",
+        "denominator": "同期接受手术的肌瘤患者总例数",
+        "question_rule": "是否符合手术指征符合规范的要求。手术指征需符合以下几条之一：（1）子宫肌瘤合并月经过多或异常出血甚至导致贫血；或出现压迫症状；（2）因肌瘤造成不孕或复发性流产；（3）子宫肌瘤患者准备妊娠时若肌瘤直径≥4cm可考虑剔除术；（4）绝经后肌瘤仍生长；（5）有蒂肌瘤扭转引起的急性腹痛；（6）粘膜下肌瘤；（7）肌瘤短期内生长迅速，且影像学检查提示有变性可能。",
+        "facts": [
+            "患者有月经过多或异常出血导致贫血，或有压迫症状 = True/False（假设值）。  ",
+            "患者因肌瘤造成不孕或复发性流产 = True/False（假设值）。  ",
+            "患者准备妊娠且肌瘤直径≥4cm = True/False（假设值）。  ",
+            "患者绝经后肌瘤仍在生长 = True/False（假设值）。  ",
+            "患者有蒂肌瘤扭转引起的急性腹痛 = True/False（假设值）。  ",
+            "患者存在粘膜下肌瘤 = True/False（假设值）。  ",
+            "患者肌瘤在短期内生长迅速且影像学检查提示有变性可能 = True/False（假设值）。  "
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者有月经过多或异常出血导致贫血，或有压迫症状，则符合手术指征。  ",
+                "symbolic language": "Fact 1 = True  "
+            },
+            {
+                "natural language": "如果患者因肌瘤造成不孕或复发性流产，则符合手术指征。  ",
+                "symbolic language": "Fact 2 = True  "
+            },
+            {
+                "natural language": "如果患者准备妊娠且肌瘤直径≥4cm，则符合手术指征。  ",
+                "symbolic language": "Fact 3 = True  "
+            },
+            {
+                "natural language": "如果患者绝经后肌瘤仍在生长，则符合手术指征。  ",
+                "symbolic language": "Fact 4 = True  "
+            },
+            {
+                "natural language": "如果患者有蒂肌瘤扭转引起急性腹痛，则符合手术指征。  ",
+                "symbolic language": "Fact 5 = True  "
+            },
+            {
+                "natural language": "如果患者存在粘膜下肌瘤，则符合手术指征。  ",
+                "symbolic language": "Fact 6 = True  "
+            },
+            {
+                "natural language": "如果患者肌瘤在短期内生长迅速且影像学检查提示有变性可能，则符合手术指征。  ",
+                "symbolic language": "Fact 7 = True  "
+            },
+            {
+                "natural language": "如果Logical Rule 1、2、3、4、5、6或7为真，则患者符合手术指征要求。  ",
+                "symbolic language": "Fact 1 ∨ Fact 2 ∨ Fact 3 ∨ Fact 4 ∨ Fact 5 ∨ Fact 6 ∨ Fact 7  "
+            }
+        ]
+    },
+    "子宫肌瘤（手术治疗）（UM）_术中止血操作规范率": {
+        "definition": "单位时间内，术中止血操作规范的肌瘤患者例数占同期接受手术的肌瘤患者总例数的比例。",
+        "formula": "术中止血操作规范率=术中止血操作规范的肌瘤患者例数/同期接受手术的肌瘤患者总例数",
+        "significance": "反映医疗机构实施子宫肌瘤手术术中操作的规范性。",
+        "other": "止血操作包括：术中可酌情使用子宫颈环扎带、缩宫素或垂体后叶素局部注射、或子宫动脉阻断等措施以减少术中出血。",
+        "instruction_standard": "你是一位专业的医生，请你判断肌瘤患者的病历是否符合术中止血操作规范的要求。止血操作包括：术中可酌情使用子宫颈环扎带、缩宫素或垂体后叶素局部注射、或子宫动脉阻断等措施以减少术中出血。",
+        "numerator": "术中止血操作规范的肌瘤患者",
+        "denominator": "同期接受手术的肌瘤患者总例数",
+        "question_rule": "是否符合术中止血操作规范的要求。止血操作包括：术中可酌情使用子宫颈环扎带、缩宫素或垂体后叶素局部注射、或子宫动脉阻断等措施以减少术中出血。",
+        "facts": [
+            "术中是否使用子宫颈环扎带 = True/False（假设值）。  ",
+            "术中是否使用缩宫素 = True/False（假设值）。  ",
+            "术中是否使用垂体后叶素 = True/False（假设值）。  ",
+            "术中是否进行子宫动脉阻断 = True/False（假设值）。  "
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果使用了子宫颈环扎带，则符合一个止血措施。  ",
+                "symbolic language": "Fact 1 = True  "
+            },
+            {
+                "natural language": "如果使用了缩宫素，则符合一个止血措施。  ",
+                "symbolic language": "Fact 2 = True  "
+            },
+            {
+                "natural language": "如果使用了垂体后叶素，则符合一个止血措施。  ",
+                "symbolic language": "Fact 3 = True  "
+            },
+            {
+                "natural language": "如果进行了子宫动脉阻断，则符合一个止血措施。  ",
+                "symbolic language": "Fact 4 = True  "
+            },
+            {
+                "natural language": "如果Logical Rule 1、2、3或4为真，则术中止血操作符合规范。  ",
+                "symbolic language": "Fact 1 ∨ Fact 2 ∨ Fact 3 ∨ Fact 4  "
+            }
+        ]
+    },
+    "子宫肌瘤（手术治疗）（UM）_术中出血发生率": {
+        "definition": "单位时间内，出血量大于1000ml的肌瘤手术患者例数占同期接受手术的肌瘤患者总例数的比例。",
+        "formula": "术中出血发生率=出血量大于1000ml的肌瘤手术患者例数/同期接受手术的肌瘤患者总例数",
+        "significance": "反映医疗机构实施子宫肌瘤手术安全情况。",
+        "other": "前提是有出血记录",
+        "instruction_standard": "你是一位专业的医生，请你判断患者的病历是否符合出血量大于1000ml的要求。",
+        "numerator": "出血量大于1000ml的肌瘤手术患者",
+        "denominator": "同期接受手术的肌瘤患者总例数",
+        "question_rule": "是否符合术中出血量大于1000ml要求。",
+        "facts": [
+            "患者的出血量 = V（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果V > 1000，则出血量符合要求。",
+                "symbolic language": "V > 1000] "
+            }
+        ]
+    },
+    "子宫肌瘤（手术治疗）（UM）_术后出院宣教率": {
+        "definition": "单位时间内，术后进行书面宣教的肌瘤患者例数占同期接受手术的肌瘤患者总例数的比例。",
+        "formula": "术后出院宣教率=术后进行书面宣教的肌瘤患者例数/同期接受手术的肌瘤患者总例数",
+        "significance": "反应医疗机构对子宫肌瘤患者的治疗方案计划性和术后管理水平。",
+        "other": "书面宣教内容包括随访时间、备孕指导、降低患者妊娠时子宫破裂风险、特殊病理类型的子宫肌瘤告知复发风险等。",
+        "instruction_standard": "你是一位专业的医生，请你判断肌瘤患者的病历是否符合术后进行书面宣教的要求。书面宣教内容包括随访时间、备孕指导、降低患者妊娠时子宫破裂风险、特殊病理类型的子宫肌瘤告知复发风险等。",
+        "numerator": "术后进行书面宣教的肌瘤患者",
+        "denominator": "同期接受手术的肌瘤患者总例数",
+        "question_rule": "是否符合术后进行书面宣教的要求。书面宣教内容包括随访时间、备孕指导、降低患者妊娠时子宫破裂风险、特殊病理类型的子宫肌瘤告知复发风险等。",
+        "facts": [
+            "术后随访时间已确定（假设时间为T）。",
+            "已提供备孕指导（假设内容为G）。",
+            "已指导降低妊娠时子宫破裂风险的方法（假设方法为R）。",
+            "已告知特殊病理类型的子宫肌瘤复发风险（假设信息为F）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则随访时间符合术后书面宣教要求。",
+                "symbolic language": "T ≠ null"
+            },
+            {
+                "natural language": "如果Fact 2为真，则备孕指导符合术后书面宣教要求。",
+                "symbolic language": "G ≠ null"
+            },
+            {
+                "natural language": "如果Fact 3为真，则降低妊娠时子宫破裂风险的指导符合术后书面宣教要求。",
+                "symbolic language": "R ≠ null"
+            },
+            {
+                "natural language": "如果Fact 4为真，则特殊病理类型的子宫肌瘤复发风险告知符合术后书面宣教要求。",
+                "symbolic language": "F ≠ null"
+            },
+            {
+                "natural language": "如果Logical Rule 1、2、3、4均为真，则患者符合术后书面宣教要求。",
+                "symbolic language": " (T ≠ null) ∧ (G ≠ null) ∧ (R ≠ null) ∧ (F ≠ null)] "
+            }
+        ]
+    },
+    "乳腺癌_腋窝淋巴结清扫充分率": {
+        "definition": "清扫腋窝淋巴结数量≥10个的乳腺癌患者数占行腋窝淋巴结清扫术的乳腺癌患者总数的比例。",
+        "formula": "腋窝淋巴结清扫充分率=清扫腋窝淋巴结数量≥10个的乳腺癌患者数/同期行腋窝淋巴结清扫术的乳腺癌患者总数",
+        "significance": "反映乳腺癌患者术中清扫腋窝淋巴结的规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断乳腺癌患者的病历是否符合清扫腋窝淋巴结数量≥10个的要求。",
+        "numerator": "清扫腋窝淋巴结数量≥10个的乳腺癌患者",
+        "denominator": "同期行腋窝淋巴结清扫术的乳腺癌患者总数",
+        "question_rule": "是否符合清扫腋窝淋巴结数量≥10个的要求。",
+        "facts": [
+            "清扫的腋窝淋巴结数量 = N（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果N ≥ 10，则清扫的腋窝淋巴结数量符合要求。",
+                "symbolic language": "N ≥ 10"
+            }
+        ]
+    },
+    "乳腺癌_乳腺癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的乳腺癌患者数占接受首次治疗的乳腺癌患者总数的比例。",
+        "formula": "乳腺癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的乳腺癌患者数/同期接受首次治疗的乳腺癌患者总数×100%",
+        "significance": "反映评估病情的规范性",
+        "other": "临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：（①或②或③）+④+⑤；基本策略2：（①或②或③）+⑥；①乳腺超声；②乳腺X线（钼靶）；③乳腺核磁；④胸部CT；⑤腹部超声（或CT或核磁）；⑥PET-CT",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前乳腺癌患者病历是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：（①或②或③）+④+⑤；基本策略2：（①或②或③）+⑥；①乳腺超声；②乳腺X线（钼靶）；③乳腺核磁；④胸部CT；⑤腹部超声（或CT或核磁）；⑥PET-CT",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的乳腺癌患者",
+        "denominator": "同期接受首次治疗的乳腺癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：（①或②或③）+④+⑤；基本策略2：（①或②或③）+⑥；①乳腺超声；②乳腺X线（钼靶）；③乳腺核磁；④胸部CT；⑤腹部超声（或CT或核磁）；⑥PET-CT。",
+        "facts": [
+            "乳腺超声 = True/False。",
+            "乳腺X线（钼靶） = True/False。",
+            "乳腺核磁 = True/False。",
+            "胸部CT = True/False。",
+            "腹部超声/CT/核磁 = True/False。",
+            "PET-CT = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者进行了乳腺超声、乳腺X线（钼靶）或乳腺核磁中的任意一项，则满足①或②或③。",
+                "symbolic language": " (Fact 1) ∨ (Fact 2) ∨ (Fact 3)"
+            },
+            {
+                "natural language": "基本策略1要求满足Logical Rule 1且进行了胸部CT和腹部超声/CT/核磁。",
+                "symbolic language": " ((Fact 1) ∨ (Fact 2) ∨ (Fact 3)) ∧ (Fact 4) ∧ (Fact 5)"
+            },
+            {
+                "natural language": "基本策略2要求满足Logical Rule 1且进行了PET-CT。",
+                "symbolic language": " ((Fact 1) ∨ (Fact 2) ∨ (Fact 3)) ∧ (Fact 6)"
+            },
+            {
+                "natural language": "如果Logical Rule 2为真或Logical Rule 3为真，则患者符合临床TNM分期检查评估符合策略的要求。",
+                "symbolic language": " (((Fact 1) ∨ (Fact 2) ∨ (Fact 3)) ∧ (Fact 4) ∧ (Fact 5)) ∨ (((Fact 1) ∨ (Fact 2) ∨ (Fact 3)) ∧ (Fact 6))"
+            }
+        ]
+    },
+    "乳腺癌_乳腺癌患者非手术治疗前病理学诊断率": {
+        "definition": "首次非手术治疗前完成病理学诊断的乳腺癌患者数占接受首次非手术治疗的乳腺癌患者总数的比例。",
+        "formula": "乳腺癌患者非手术治疗前病理学诊断率=首次非手术治疗前完成病理学诊断的乳腺癌患者数/同期接受首次非手术治疗的乳腺癌患者总数×100%",
+        "significance": "明确病理诊断是肿瘤综合治疗方案选择的基础。",
+        "other": "本指标的非手术治疗包括放疗、化疗、靶向治疗、内分泌治疗、免疫治疗等治疗。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次非手术治疗前乳腺癌患者病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次非手术治疗前完成病理学诊断的乳腺癌患者",
+        "denominator": "同期接受首次非手术治疗的乳腺癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "组织活检已进行 = True/False。",
+            "组织活检结果显示癌症存在 = True/False。",
+            "细胞学检查已进行 = True/False。",
+            "细胞学检查结果显示癌症存在 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果组织活检已进行且结果显示癌症存在，则病理学诊断完成。",
+                "symbolic language": " (组织活检已进行 ∧ 组织活检结果显示癌症存在)"
+            },
+            {
+                "natural language": "如果细胞学检查已进行且结果显示癌症存在，则病理学诊断完成。",
+                "symbolic language": " (细胞学检查已进行 ∧ 细胞学检查结果显示癌症存在)"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则病理学诊断已完成。",
+                "symbolic language": " [(组织活检已进行 ∧ 组织活检结果显示癌症存在) ∨ (细胞学检查已进行 ∧ 细胞学检查结果显示癌症存在)"
+            }
+        ]
+    },
+    "前列腺癌质控指标_前列腺癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的前列腺癌患者数占接受首次治疗的前列腺癌患者总数的比例。",
+        "formula": "前列腺癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的前列腺癌患者数/同期接受首次治疗的前列腺癌患者总数×100%",
+        "significance": "反映病情评估的规范性。",
+        "other": "临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：胸部影像（CT或X线）+腹部影像（CT或腹部超声）+盆腔影像（MRI或CT或经直肠超声）+全身骨显像；基本策略2：全身PET-CT。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前列腺癌患者病历是否符合临床TNM分期检查评估。临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：胸部影像（CT或X线）+腹部影像（CT或腹部超声）+盆腔影像（MRI或CT或经直肠超声）+全身骨显像；基本策略2：全身PET-CT。",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的前列腺癌患者",
+        "denominator": "同期接受首次治疗的前列腺癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估。临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：胸部影像（CT或X线）+腹部影像（CT或腹部超声）+盆腔影像（MRI或CT或经直肠超声）+全身骨显像；基本策略2：全身PET-CT。",
+        "facts": [
+            "胸部影像检查 = 已进行/未进行。",
+            "腹部影像检查 = 已进行/未进行。",
+            "盆腔影像检查 = 已进行/未进行。",
+            "全身骨显像 = 已进行/未进行。",
+            "全身PET-CT检查 = 已进行/未进行。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果胸部影像检查已进行，则符合胸部影像检查要求。",
+                "symbolic language": "胸部影像检查 = 已进行"
+            },
+            {
+                "natural language": "如果腹部影像检查已进行，则符合腹部影像检查要求。",
+                "symbolic language": "腹部影像检查 = 已进行"
+            },
+            {
+                "natural language": "如果盆腔影像检查已进行，则符合盆腔影像检查要求。",
+                "symbolic language": "盆腔影像检查 = 已进行"
+            },
+            {
+                "natural language": "如果全身骨显像已进行，则符合全身骨显像检查要求。",
+                "symbolic language": "全身骨显像 = 已进行"
+            },
+            {
+                "natural language": "如果全身PET-CT检查已进行，则符合全身PET-CT检查要求。",
+                "symbolic language": "全身PET-CT检查 = 已进行"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真且Logical Rule 4为真，则符合基本策略1。",
+                "symbolic language": " (胸部影像检查 = 已进行) ∧ (腹部影像检查 = 已进行) ∧ (盆腔影像检查 = 已进行) ∧ (全身骨显像 = 已进行)"
+            },
+            {
+                "natural language": "如果Logical Rule 5为真，则符合基本策略2。",
+                "symbolic language": "全身PET-CT检查 = 已进行"
+            },
+            {
+                "natural language": "如果Logical Rule 6为真或Logical Rule 7为真，则患者符合临床TNM分期检查评估要求。",
+                "symbolic language": " ((胸部影像检查 = 已进行) ∧ (腹部影像检查 = 已进行) ∧ (盆腔影像检查 = 已进行) ∧ (全身骨显像 = 已进行)) ∨ (全身PET-CT检查 = 已进行)"
+            }
+        ]
+    },
+    "前列腺癌质控指标_前列腺癌患者首次非手术治疗前病理学诊断率（核心指标）": {
+        "definition": "首次非手术治疗前完成病理学诊断的前列腺癌患者数占接受首次非手术治疗的前列腺癌患者总数的比例。",
+        "formula": "前列腺癌患者首次非手术治疗前病理学诊断率=首次非手术治疗前完成病理学诊断的前列腺癌患者数/同期接受首次非手术治疗的前列腺癌患者总数×100%",
+        "significance": "反映前列腺癌诊疗规范性。",
+        "other": "非手术治疗指针对肿瘤开展的放疗、化疗、靶向治疗、内分泌治疗、免疫治疗等治疗",
+        "instruction_standard": "你是一位专业的医生，请你判断首次非手术治疗前前列腺癌患者的病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次非手术治疗前完成病理学诊断的前列腺癌患者",
+        "denominator": "同期接受首次非手术治疗的前列腺癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "组织活检已进行 = True/False。",
+            "组织活检结果显示癌症存在 = True/False。",
+            "细胞学检查已进行 = True/False。",
+            "细胞学检查结果显示癌症存在 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果组织活检已进行且结果显示癌症存在，则病理学诊断完成。",
+                "symbolic language": " (组织活检已进行 ∧ 组织活检结果显示癌症存在)"
+            },
+            {
+                "natural language": "如果细胞学检查已进行且结果显示癌症存在，则病理学诊断完成。",
+                "symbolic language": " (细胞学检查已进行 ∧ 细胞学检查结果显示癌症存在)"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则病理学诊断已完成。",
+                "symbolic language": " [(组织活检已进行 ∧ 组织活检结果显示癌症存在) ∨ (细胞学检查已进行 ∧ 细胞学检查结果显示癌症存在)"
+            }
+        ]
+    },
+    "前列腺癌质控指标_前列腺癌患者术后病理TNM分期率（核心指标）": {
+        "definition": "经手术治疗后完成明确病理TNM分期的前列腺癌患者数占手术治疗的前列腺癌患者总数的比例。",
+        "formula": "前列腺癌患者术后病理TNM分期率=手术治疗后完成病理TNM分期的前列腺癌患者数/同期手术治疗的前列腺癌患者总数×100%",
+        "significance": "",
+        "other": "术后病理评估是肿瘤类型、分期、预后因素的重要依据，反映前列腺癌诊疗规范性。",
+        "instruction_standard": "你是一位专业的医生，请你判断手术治疗后前列腺癌患者的病历是否符合完成病理TNM分期的要求。",
+        "numerator": "手术治疗后完成病理TNM分期的前列腺癌患者",
+        "denominator": "同期手术治疗的前列腺癌患者总数",
+        "question_rule": "是否符合完成病理TNM分期的要求。",
+        "facts": [
+            "病理T分期 = T1/T2/T3/T4（假设值）。",
+            "病理N分期 = N0/N1（假设值）。",
+            "病理M分期 = M0/M1（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果病理T分期存在，则T分期记录完整。",
+                "symbolic language": "T ≠ null"
+            },
+            {
+                "natural language": "如果病理N分期存在，则N分期记录完整。",
+                "symbolic language": "N ≠ null"
+            },
+            {
+                "natural language": "如果病理M分期存在，则M分期记录完整。",
+                "symbolic language": "M ≠ null"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真，则病理TNM分期完整。",
+                "symbolic language": " (T ≠ null) ∧ (N ≠ null) ∧ (M ≠ null)"
+            }
+        ]
+    },
+    "原发性急性闭角型青光眼（手术治疗）_出院时眼压达标率（核心指标）": {
+        "definition": "单位时间内，出院当天眼压达标的PACG术眼总数占PACG术眼总数的比例。",
+        "formula": "出院时眼压达标率=出院当天眼压达标的PACG术眼总数/PACG术眼总数×100%",
+        "significance": "是手术成功率的重要指标，比率越高，说明该医疗机构眼科的水平越高。",
+        "other": "眼压达标是指术眼眼压小于等于21mmHg且大于6mmHg。",
+        "instruction_standard": "你是一位专业的医生，请你判断PACG术患者的病历是否符合出院当天眼压达标的要求。要求是术眼眼压小于等于21mmHg且大于6mmHg。",
+        "numerator": "出院当天眼压达标的PACG术眼",
+        "denominator": "PACG术眼总数",
+        "question_rule": "是否符合出院当天眼压达标的要求。要求是术眼眼压小于等于21mmHg且大于6mmHg。",
+        "facts": [
+            "术眼出院当天眼压 = P（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果P <= 21，则眼压符合上限要求。",
+                "symbolic language": "P <= 21"
+            },
+            {
+                "natural language": "如果P > 6，则眼压符合下限要求。",
+                "symbolic language": "P > 6"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真，则术眼眼压符合出院要求。",
+                "symbolic language": " (P <= 21) ∧ (P > 6)"
+            }
+        ]
+    },
+    "原发性急性闭角型青光眼（手术治疗）_术前评估率": {
+        "definition": "单位时间内，术前完善眼科评估和全身评估的PACG患者例数占PACG手术患者总例数的比例。",
+        "formula": "术前评估率=术前完善眼科评估和全身评估的PACG患者例数/PACG手术患者总例数×100%",
+        "significance": "该指标反映该医疗机构眼科诊治是否规范，比例越高，说明越规范。",
+        "other": "对PACG手术治疗的患者术前进行全面的眼科评估（必须包括双眼视力、眼压、前房深度、眼轴长度、房角情况、视野）以及全身评估（必须包括血压、血常规、血糖、凝血功能、感染指标、心电图、胸片）。前房深度和眼轴长度可以通过A超、UBM或者Lenstar等直接测得。房角情况可以通过房角镜或者UBM检查获得。视野必须通过视野仪检查获得。",
+        "instruction_standard": "你是一位专业的医生，请你判断PACG患者的病历是否符合术前完善眼科评估和全身评估的要求。对PACG手术治疗的患者术前进行全面的眼科评估（必须包括双眼视力、眼压、前房深度、眼轴长度、房角情况、视野）以及全身评估（必须包括血压、血常规、血糖、凝血功能、感染指标、心电图、胸片）。前房深度和眼轴长度可以通过A超、UBM或者Lenstar等直接测得。房角情况可以通过房角镜或者UBM检查获得。视野必须通过视野仪检查获得。",
+        "numerator": "术前完善眼科评估和全身评估的PACG患者",
+        "denominator": "PACG手术患者总例数",
+        "question_rule": "是否符合术前完善眼科评估和全身评估的要求。眼科评估包括：双眼视力、眼压、前房深度、眼轴长度、房角情况、视野。全身评估包括：血压、血常规、血糖、凝血功能、感染指标、心电图、胸片。前房深度和眼轴长度可通过A超、UBM或Lenstar测得；房角情况可通过房角镜或UBM检查获得；视野需通过视野仪检查获得。",
+        "facts": [
+            "双眼视力检查已完成 = True/False",
+            "眼压检查已完成 = True/False",
+            "前房深度通过A超/UBM/Lenstar测量已完成 = True/False",
+            "眼轴长度通过A超/UBM/Lenstar测量已完成 = True/False",
+            "房角情况通过房角镜/UBM检查已完成 = True/False",
+            "视野通过视野仪检查已完成 = True/False",
+            "血压测量已完成 = True/False",
+            "血常规检查已完成 = True/False",
+            "血糖测量已完成 = True/False",
+            "凝血功能检查已完成 = True/False",
+            "感染指标检查已完成 = True/False",
+            "心电图检查已完成 = True/False",
+            "胸片检查已完成 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Facts 1到6均为真，则眼科评估符合要求。",
+                "symbolic language": "Fact 1 ∧ Fact 2 ∧ Fact 3 ∧ Fact 4 ∧ Fact 5 ∧ Fact 6"
+            },
+            {
+                "natural language": "如果Facts 7到13均为真，则全身评估符合要求。",
+                "symbolic language": "Fact 7 ∧ Fact 8 ∧ Fact 9 ∧ Fact 10 ∧ Fact 11 ∧ Fact 12 ∧ Fact 13"
+            },
+            {
+                "natural language": "如果Logical Rule 1和Logical Rule 2均为真，则术前评估符合要求。",
+                "symbolic language": "(Fact 1 ∧ Fact 2 ∧ Fact 3 ∧ Fact 4 ∧ Fact 5 ∧ Fact 6) ∧ (Fact 7 ∧ Fact 8 ∧ Fact 9 ∧ Fact 10 ∧ Fact 11 ∧ Fact 12 ∧ Fact 13)"
+            }
+        ]
+    },
+    "原发性急性闭角型青光眼（手术治疗）_前房深度小于1.5mm术眼率": {
+        "definition": "单位时间内，前房深度小于1.5mm的PACG术眼数占PACG术眼总数的比例。",
+        "formula": "前房深度小于1.5mm术眼率=前房深度小于1.5mm的PACG术眼数/PACG术眼总数×100%",
+        "significance": "该指标反映该医疗机构眼科病人病情是否危重，手术难度大，比例越高，说明危重病人越多。",
+        "other": "前房深度是指角膜内皮层中央顶点到晶体前表面的垂直距离；该前房深度可以通过UBM和Lenstar直接测得，或者用A超和IOLmaster测得的ACD值减去中央角膜厚度\n从而得到。",
+        "instruction_standard": "你是一位专业的医生，请你判断PACG术眼患者病历是否符合前房深度小于1.5mm的要求。前房深度是指角膜内皮层中央顶点到晶体前表面的垂直距离；该前房深度可以通过UBM和Lenstar直接测得，或者用A超和IOLmaster测得的ACD值减去中央角膜厚度\n从而得到。",
+        "numerator": "前房深度小于1.5mm的PACG术眼",
+        "denominator": "PACG术眼总数",
+        "question_rule": "是否符合前房深度小于1.5mm的要求。前房深度的定义及测量方法包括：角膜内皮层中央顶点到晶体前表面的垂直距离，可以通过UBM和Lenstar直接测得，或者用A超和IOLmaster测得的ACD值减去中央角膜厚度得到。",
+        "facts": [
+            "UBM测得的前房深度 = U（假设值）。",
+            "Lenstar测得的前房深度 = L（假设值）。",
+            "A超测得的ACD值 = A（假设值）。",
+            "IOLmaster测得的ACD值 = I（假设值）。",
+            "中央角膜厚度 = CCT（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果U < 1.5，则UBM测量符合要求。",
+                "symbolic language": "U < 1.5"
+            },
+            {
+                "natural language": "如果L < 1.5，则Lenstar测量符合要求。",
+                "symbolic language": "L < 1.5"
+            },
+            {
+                "natural language": "如果(A - CCT) < 1.5，则A超测量符合要求。",
+                "symbolic language": "(A - CCT) < 1.5"
+            },
+            {
+                "natural language": "如果(I - CCT) < 1.5，则IOLmaster测量符合要求。",
+                "symbolic language": "(I - CCT) < 1.5"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真或Logical Rule 3为真或Logical Rule 4为真，则患者符合前房深度要求。",
+                "symbolic language": " (U < 1.5) ∨ (L < 1.5) ∨ ((A - CCT) < 1.5) ∨ ((I - CCT) < 1.5)"
+            }
+        ]
+    },
+    "原发性急性闭角型青光眼（手术治疗）_术前高眼压率": {
+        "definition": "术前一天眼压高于30mmHg的PACG术眼总数占PACG术眼总数的比例。",
+        "formula": "术前高眼压率=术前一天眼压高于30mmHg的PACG术眼总数/PACG术眼总数×100%",
+        "significance": "该指标反映该医疗机构眼科病人PACG病情是否严重，该比例越高，说明危重病人越多",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断PACG术眼的患者病历是否符合术前一天眼压高于30mmHg的要求。",
+        "numerator": "术前一天眼压高于30mmHg的PACG术眼",
+        "denominator": "PACG术眼总数",
+        "question_rule": "是否符合术前一天眼压高于30mmHg的要求。",
+        "facts": [
+            "术前一天眼压 = P（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果术前一天眼压高于30mmHg，则符合要求",
+                "symbolic language": "(P ≥ 30) = True"
+            }
+        ]
+    },
+    "宫颈癌质控指标_切缘阴性率": {
+        "definition": "单位时间内，宫颈癌初次手术后阴道和双侧宫旁切缘阴性患者例数占同期宫颈癌手术患者总例数的比例。",
+        "formula": "切缘阴性率=宫颈癌初次手术后阴道和双侧宫旁切缘阴性患者例数/同期宫颈癌手术患者总例数×100%",
+        "significance": "反应医疗机构实施宫颈癌手术技术水平的重要过程性指标之一。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断宫颈癌初次手术后患者的病历是否符合阴道和双侧宫旁切缘阴性要求。",
+        "numerator": "宫颈癌初次手术后阴道和双侧宫旁切缘阴性患者",
+        "denominator": "同期宫颈癌手术患者总例数",
+        "question_rule": "是否符合阴道和双侧宫旁切缘阴性要求。",
+        "facts": [
+            "阴道切缘病理结果 = V（假设值）。",
+            "左侧宫旁切缘病理结果 = L（假设值）。",
+            "右侧宫旁切缘病理结果 = R（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果V为阴性，则阴道切缘符合要求。",
+                "symbolic language": "V = 阴性"
+            },
+            {
+                "natural language": "如果L为阴性，则左侧宫旁切缘符合要求。",
+                "symbolic language": "L = 阴性"
+            },
+            {
+                "natural language": "如果R为阴性，则右侧宫旁切缘符合要求。",
+                "symbolic language": "R = 阴性"
+            },
+            {
+                "natural language": "如果Logical Rule 1、Logical Rule 2和Logical Rule 3都为真，则患者符合阴性切缘要求。",
+                "symbolic language": " (V = 阴性) ∧ (L = 阴性) ∧ (R = 阴性)] "
+            }
+        ]
+    },
+    "宫颈癌质控指标_宫颈癌患者首次治疗前临床FIGO分期检查评估策略符合率": {
+        "definition": "首次治疗前临床FIGO分期检查评估符合策略的宫颈癌患者数占接受首次治疗的宫颈癌患者总数的比例。",
+        "formula": "宫颈癌患者首次治疗前临床FIGO分期检查评估策略符合率=首次治疗前临床FIGO分期检查评估符合策略的宫颈癌患者数/同期接受首次治疗的宫颈癌患者总数×100%",
+        "significance": "反映评估病情的规范性。",
+        "other": "临床FIGO分期检查评估符合策略是指符合基本策略1或基本策略2。\n基本策略1：盆腔MRI+颈胸腹盆腔增强CT+妇科检查；\n基本策略2：盆腔MRI+全身PET-CT+妇科检查。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前宫颈癌患者的病历是否符合临床FIGO分期检查评估符合策略的要求。临床FIGO分期检查评估符合策略是指符合基本策略1或基本策略2。\n基本策略1：盆腔MRI+颈胸腹盆腔增强CT+妇科检查；\n基本策略2：盆腔MRI+全身PET-CT+妇科检查。",
+        "numerator": "首次治疗前临床FIGO分期检查评估符合策略的宫颈癌患者",
+        "denominator": "同期接受首次治疗的宫颈癌患者总数",
+        "question_rule": "是否符合临床FIGO分期检查评估符合策略的要求。临床FIGO分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：盆腔MRI+颈胸腹盆腔增强CT+妇科检查；基本策略2：盆腔MRI+全身PET-CT+妇科检查。",
+        "facts": [
+            "盆腔MRI = 已进行/未进行。",
+            "颈胸腹盆腔增强CT = 已进行/未进行。",
+            "全身PET-CT = 已进行/未进行。",
+            "妇科检查 = 已进行/未进行。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果盆腔MRI已进行且颈胸腹盆腔增强CT已进行且妇科检查已进行，则符合基本策略1。",
+                "symbolic language": " (盆腔MRI = 已进行) ∧ (颈胸腹盆腔增强CT = 已进行) ∧ (妇科检查 = 已进行)"
+            },
+            {
+                "natural language": "如果盆腔MRI已进行且全身PET-CT已进行且妇科检查已进行，则符合基本策略2。",
+                "symbolic language": " (盆腔MRI = 已进行) ∧ (全身PET-CT = 已进行) ∧ (妇科检查 = 已进行)"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则病历符合临床FIGO分期检查评估符合策略的要求。",
+                "symbolic language": " [(盆腔MRI = 已进行) ∧ (颈胸腹盆腔增强CT = 已进行) ∧ (妇科检查 = 已进行)] ∨ [(盆腔MRI = 已进行) ∧ (全身PET-CT = 已进行) ∧ (妇科检查 = 已进行)]"
+            }
+        ]
+    },
+    "宫颈癌质控指标_宫颈癌患者首次治疗前病理学诊断率": {
+        "definition": "首次治疗前完成病理学诊断的宫颈癌患者数占接受首次治疗的宫颈癌患者总数的比例",
+        "formula": "宫颈癌患者首次治疗前病理学诊断率=首次治疗前完成病理学诊断的宫颈癌患者数/同期接受首次治疗的宫颈癌患者总数×100%",
+        "significance": "反映宫颈癌治疗的规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前宫颈癌患者的病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次治疗前完成病理学诊断的宫颈癌患者",
+        "denominator": "同期接受首次治疗的宫颈癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "组织活检已进行 = True/False。",
+            "组织活检结果显示癌症存在 = True/False。",
+            "细胞学检查已进行 = True/False。",
+            "细胞学检查结果显示癌症存在 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果组织活检已进行且结果显示癌症存在，则病理学诊断完成。",
+                "symbolic language": " (组织活检已进行 ∧ 组织活检结果显示癌症存在)"
+            },
+            {
+                "natural language": "如果细胞学检查已进行且结果显示癌症存在，则病理学诊断完成。",
+                "symbolic language": " (细胞学检查已进行 ∧ 细胞学检查结果显示癌症存在)"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则病理学诊断已完成。",
+                "symbolic language": " [(组织活检已进行 ∧ 组织活检结果显示癌症存在) ∨ (细胞学检查已进行 ∧ 细胞学检查结果显示癌症存在)"
+            }
+        ]
+    },
+    "急性动脉瘤性蛛网膜下腔出血（初发，手术治疗）_术前评估完成率": {
+        "definition": "单位时间内，术前完整评估的急性动脉瘤性蛛网膜下腔出血患者例数占同期急性动脉瘤性蛛网膜下腔出血患者总例数的比例。",
+        "formula": "术前评估率=术前完整评估的急性动脉瘤性蛛网膜下腔出血患者例数/同期急性动脉瘤性蛛网膜下腔出血患者总例数×100%",
+        "significance": "体现医疗机构开展急性动脉瘤性蛛网膜下腔出血治疗前规范化检查的重要过程性指标之一。",
+        "other": "急性动脉瘤性蛛网膜下腔出血患者治疗前需完善CT、CTA和DSA等辅助检查，并结合体格检查，以保障手术安全和避免手术并发症为出发点，及时对患者病情进行全面分\n析评估，选择合适的手术方式和治疗方案。其中，DSA做为诊断金标准，其完成情况需重点关注。",
+        "instruction_standard": "你是一位专业的医生，请你判断急性动脉瘤性蛛网膜下腔出血患者的病历是否符合术前完整评估的要求。急性动脉瘤性蛛网膜下腔出血患者治疗前需完善CT、CTA和DSA等辅助检查，并结合体格检查，以保障手术安全和避免手术并发症为出发点，及时对患者病情进行全面分\n析评估，选择合适的手术方式和治疗方案。其中，DSA做为诊断金标准，其完成情况需重点关注。",
+        "numerator": "术前完整评估的急性动脉瘤性蛛网膜下腔出血患者",
+        "denominator": "同期急性动脉瘤性蛛网膜下腔出血患者总例数",
+        "question_rule": "是否符合术前完整评估的要求。急性动脉瘤性蛛网膜下腔出血患者治疗前需完善CT、CTA和DSA等辅助检查，并结合体格检查，以保障手术安全和避免手术并发症为出发点，及时对患者病情进行全面分析评估，选择合适的手术方式和治疗方案。其中，DSA作为诊断金标准，其完成情况需重点关注。",
+        "facts": [
+            "患者完成CT检查 = True/False。",
+            "患者完成CTA检查 = True/False。",
+            "患者完成DSA检查 = True/False。",
+            "患者进行体格检查 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果CT检查已完成，则CT检查符合要求。",
+                "symbolic language": "CT检查已完成 = True"
+            },
+            {
+                "natural language": "如果CTA检查已完成，则CTA检查符合要求。",
+                "symbolic language": "CTA检查已完成 = True"
+            },
+            {
+                "natural language": "如果DSA检查已完成，则DSA检查符合要求。",
+                "symbolic language": "DSA检查已完成 = True"
+            },
+            {
+                "natural language": "如果体格检查已完成，则体格检查符合要求。",
+                "symbolic language": "体格检查已完成 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1、2、3和4均为真，则患者符合术前完整评估要求。",
+                "symbolic language": " (CT检查已完成 ∧ CTA检查已完成 ∧ DSA检查已完成 ∧ 体格检查已完成)"
+            }
+        ]
+    },
+    "急性心肌梗死（ST段抬高型，首次住院）（STEMI）质控指标_发病24小时内急性STEMI患者再灌注治疗率（核心指标）": {
+        "definition": "单位时间内，发病24小时内接受再灌注治疗的急性STEMI患者数，占同期发病24小时内急性STEMI患者总数的比例",
+        "formula": "发病24小时内急性STEMI患者再灌注治疗率=24小时内接受再灌注治疗的急性STEMI患者数/同期发病24小时内急性STEMI患者总数×100%",
+        "significance": "评价医院对急性STEMI患者救治的规范性。",
+        "other": "再灌注治疗方式包括：经皮冠状动脉介入治疗（PCI）或静脉溶栓。",
+        "instruction_standard": "你是一位专业的医生，请你判断急性STEMI患者的病历是否符合24小时内接受再灌注治疗的要求。再灌注治疗方式包括：经皮冠状动脉介入治疗（PCI）或静脉溶栓。",
+        "numerator": "24小时内接受再灌注治疗的急性STEMI患者",
+        "denominator": "同期发病24小时内急性STEMI患者总数",
+        "question_rule": "是否符合24小时内接受再灌注治疗的要求。再灌注治疗方式包括：经皮冠状动脉介入治疗（PCI）或静脉溶栓。",
+        "facts": [
+            "患者症状发作时间。",
+            "患者接受再灌注治疗的时间。",
+            "再灌注治疗的具体方式。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者症状发作时间与接受再灌注治疗的时间差小于或等于24小时，则满足要求。",
+                "symbolic language": "If (Fact 1 - Fact 2) ≤ 24 hours, then True."
+            },
+            {
+                "natural language": "如果再灌注治疗的具体方式为PCI或静脉溶栓，则满足要求。",
+                "symbolic language": "If Fact 3 ∈ {PCI, 静脉溶栓}, then True."
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则患者符合24小时内接受再灌注治疗的要求。",
+                "symbolic language": " Logical Rules 1  ∧ Logical Rules 2"
+            }
+        ]
+    },
+    "急性心肌梗死（ST段抬高型，首次住院）（STEMI）质控指标_急性 STEMI 患者住院期间应用超声心动图（UCG）评价左心室射血分数（LVEF）的比例": {
+        "definition": "单位时间内，住院期间通过 UCG 评价 LVEF 的急性 STEMI 患者数，占同期急性STEMI 患者总数的比例。",
+        "formula": "急性 STEMI 患者住院期间应用UCG 评价 LVEF 的比例 = 住院期间通过 UCG 评价 LVEF 的急性 STEMI 患者数/同期急性 STEMI 患者总数×100%",
+        "significance": "评价 STEMI 急性期规范化诊疗与评估情况。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断急性 STEMI 患者的病历是否符合住院期间通过 UCG 评价 LVEF 的要求。",
+        "numerator": "住院期间通过 UCG 评价 LVEF 的急性 STEMI 患者",
+        "denominator": "同期急性 STEMI 患者总数",
+        "question_rule": "是否符合住院期间通过 UCG 评价 LVEF 的要求。",
+        "facts": [
+            "患者在住院期间接受了UCG检查 = True/False",
+            "UCG检查结果中包含LVEF评估 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果进行了UCG检查，且结果包含LVEF评估，则患者病历符合住院期间通过UCG评价LVEF的要求。",
+                "symbolic language": "Fact 1 ∧ Fact 2"
+            }
+        ]
+    },
+    "急性心肌梗死（ST段抬高型，首次住院）（STEMI）质控指标_急性 STEMI 患者出院阿司匹林使用率": {
+        "definition": "单位时间内，出院使用阿司匹林的急性 STEMI 患者数，占同期急性 STEMI 患者总数的比例。",
+        "formula": "急性 STEMI 患者出院阿司匹林使用率 = 出院使用阿司匹林的急性 STEMI 患者数/同期急性 STEMI 患者总数×100%",
+        "significance": "评价 STEMI 二级预防情况。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断急性STEMI患者的病历是否符合出院使用阿司匹林的要求。",
+        "numerator": "出院使用阿司匹林的急性 STEMI 患者",
+        "denominator": "同期急性 STEMI 患者总数",
+        "question_rule": "是否符合出院使用阿司匹林的要求。",
+        "facts": [
+            "患者出院时使用阿司匹林 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact1 为真，则符合患者出院时使用阿司匹林",
+                "symbolic language": "Fact 1 = True"
+            }
+        ]
+    },
+    "急性心肌梗死（ST段抬高型，首次住院）（STEMI）质控指标_急性 STEMI 患者出院 P2Y12 受体拮抗剂使用率": {
+        "definition": "单位时间内，出院使用 P2Y12 受体拮抗剂的急性 STEMI 患者数，占同期急性STEMI 患者总数的比例。",
+        "formula": "急性 STEMI 患者出院P2Y12 受体拮抗剂使用率 = 出院使用 P2Y12 受体拮抗剂的急性 STEMI 患者数/同期急性 STEMI 患者总数×100%",
+        "significance": "评价 STEMI 二级预防情况。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断急性 STEMI 患者的病历是否符合出院使用 P2Y12 受体拮抗剂的要求。",
+        "numerator": "出院使用 P2Y12 受体拮抗剂的急性 STEMI 患者",
+        "denominator": "同期急性 STEMI 患者总数",
+        "question_rule": "是否符合出院使用 P2Y12 受体拮抗剂的要求。",
+        "facts": [
+            "患者在出院时使用了P2Y12受体拮抗剂 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则患者在出院时使用P2Y12受体拮抗剂。  ",
+                "symbolic language": "Fact 1 = True  "
+            }
+        ]
+    },
+    "急性心肌梗死（ST段抬高型，首次住院）（STEMI）质控指标_急性 STEMI 患者出院 β 受体阻滞剂使用率": {
+        "definition": "单位时间内，出院使用 β 受体阻滞剂的急性 STEMI 患者数，占同期急性 STEMI患者总数的比例。",
+        "formula": "急性 STEMI 患者出院β 受体阻滞剂使用率 = 出院使用 β 受体阻滞剂的急性 STEMI 患者数/同期急性 STEMI 患者总数×100%",
+        "significance": "评价 STEMI 二级预防情况。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断急性 STEMI 患者的病历是否符合出院使用 β 受体阻滞剂的要求。",
+        "numerator": "出院使用 β 受体阻滞剂的急性 STEMI 患者",
+        "denominator": "同期急性 STEMI 患者总数",
+        "question_rule": "是否符合出院使用 β 受体阻滞剂的要求。",
+        "facts": [
+            "患者在出院时使用β受体阻滞剂 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact1为真，则患者符合出院使用β受体阻滞剂的要求。  ",
+                "symbolic language": "Fact 1 = True "
+            }
+        ]
+    },
+    "急性心肌梗死（ST段抬高型，首次住院）（STEMI）质控指标_急性 STEMI 患者出院血管紧张素转换酶抑制剂（ACEI）或血管紧张素Ⅱ受体拮抗剂（ARB）使用率": {
+        "definition": "单位时间内，出院使用 ACEI 或 ARB 的急性 STEMI 患者数，占同期急性 STEMI患者总数的比例。",
+        "formula": "急性 STEMI 患者出院ACEI/ARB 使用率 = 出院使用 ACEI/ARB 的急性 STEMI 患者数/同期急性 STEMI 患者总数×100%",
+        "significance": "评价 STEMI 二级预防情况。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断急性 STEMI 患者的病历是否符合出院使用 ACEI/ARB 的要求。",
+        "numerator": "出院使用 ACEI/ARB 的急性 STEMI 患者",
+        "denominator": "同期急性 STEMI 患者总数",
+        "question_rule": "是否符合出院使用 ACEI/ARB 的要求。",
+        "facts": [
+            "患者出院时使用了ACEI/ARB = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact1为真，则患者符合出院使用ACEI/ARB的要求。  ",
+                "symbolic language": "Fact 1 = True "
+            }
+        ]
+    },
+    "急性心肌梗死（ST段抬高型，首次住院）（STEMI）质控指标_急性 STEMI 患者出院他汀类药物使用率": {
+        "definition": "单位时间内，出院使用他汀类药物的急性 STEMI 患者数，占同期急性 STEMI 患者总数的比例。",
+        "formula": "急性 STEMI 患者出院他汀类药物使用率 = 出院使用他汀类药物的急性 STEMI 患者数/ 同期急性 STEMI 患者总数×100%",
+        "significance": "评价 STEMI 二级预防情况。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断急性STEMI患者的病历是否符合出院使用他汀类药物的要求。",
+        "numerator": "出院使用他汀类药物的急性 STEMI 患者",
+        "denominator": "同期急性 STEMI 患者总数",
+        "question_rule": "是否符合出院使用他汀类药物的要求。",
+        "facts": [
+            "出院时开具他汀类药物 = True/False（假设值）。  "
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact1为真，则患者符合出院使用他汀类药物的要求。  ",
+                "symbolic language": "Fact 1 = True "
+            }
+        ]
+    },
+    "消化道出血质控指标_内镜下止血成功率": {
+        "definition": "单位时间内，内镜下止血成功患者例数占同期行内镜止血治疗患者总例数的比例",
+        "formula": "内镜下止血成功率=同期行内镜止血治疗患者总例数/内镜下止血成功患者例数×100%",
+        "significance": "反映消化道出血内镜下止血治疗水平。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判内镜下止血治疗患者的病历是否符合止血成功相关要求。",
+        "numerator": "内镜下止血成功患者",
+        "denominator": "同期行内镜止血治疗患者总例数",
+        "question_rule": "是否符合内镜止血成功相关要求。",
+        "facts": [
+            "病灶处是否有活动性出血。",
+            "是否采取止血措施。",
+            "观察期内是否未见活动性出血。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "病灶处是否有活动性出血。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "是否采取止血措施。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "观察期内是否未见活动性出血。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "Logical Rules 1为真且Logical Rules 2 为真且Logical Rules为真，则满足内镜下止血要求。",
+                "symbolic language": "Fact 1 ∧ Fact 2 ∧ Fact 3"
+            }
+        ]
+    },
+    "甲状腺癌质控指标_甲状腺癌患者手术前细胞病理学检查率": {
+        "definition": "甲状腺癌手术治疗前完成细胞病理学检查的患者数占接受手术治疗的甲状腺癌患者总数的比例。",
+        "formula": "甲状腺癌患者手术前细胞病理学检查率 = 甲状腺癌手术治疗前完成细胞病理学检查的患者数/同期接受手术治疗的甲状腺癌患者总数×100%",
+        "significance": "反映甲状腺癌诊治规范程度。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断甲状腺癌手术治疗前的患者病历是否符合完成细胞病理学检查要求。",
+        "numerator": "甲状腺癌手术治疗前完成细胞病理学检查的患者",
+        "denominator": "同期接受手术治疗的甲状腺癌患者总数",
+        "question_rule": "是否完成细胞病理学检查要求。",
+        "facts": [
+            "细胞病理学检查方法结果 = True/False。",
+            "病理检查结果支持甲状腺癌诊断 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则完成细胞病理学检查。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Fact 2为真，则细胞病理学检查支持甲状腺癌诊断。",
+                "symbolic language": " Fact 1  ∧ Fact 2"
+            }
+        ]
+    },
+    "甲状腺癌质控指标_颈侧区淋巴结清扫率": {
+        "definition": "单位时间内，行颈侧区淋巴结清扫的甲状腺癌手术患者例数占同期甲状腺癌手术患者总例数的比例。",
+        "formula": "颈侧区淋巴结清扫率=行颈侧区淋巴结清扫的甲状腺癌手术患者例数/同期甲状腺癌手术患者总例数×100%",
+        "significance": "评价手术诊疗质量情况。",
+        "other": "甲状腺癌手术治疗中，颈侧区淋巴结清扫通常是指对颈部II、III、IV、V区的淋巴结进行清扫。适用于术前检查提示颈侧区发生淋巴结转移的甲状腺癌患者",
+        "instruction_standard": "你是一位专业的医生，请你判断甲状腺癌患者的病历是否符合行颈侧区淋巴结清扫的要求。甲状腺癌手术治疗中，颈侧区淋巴结清扫通常是指对颈部II、III、IV、V区的淋巴结进行清扫。",
+        "numerator": "行颈侧区淋巴结清扫的甲状腺癌手术患者",
+        "denominator": "同期甲状腺癌手术患者总例数",
+        "question_rule": "是否符合行颈侧区淋巴结清扫的要求。甲状腺癌手术治疗中，颈侧区淋巴结清扫通常是指对颈部II、III、IV、V区的淋巴结进行清扫。",
+        "facts": [
+            "颈侧区淋巴结清扫 = True/False（假设值）。",
+            "颈部II淋巴结清扫 = True/False（假设值）。",
+            "颈部III淋巴结清扫 = True/False（假设值）。",
+            "颈部IV淋巴结清扫 = True/False（假设值）。",
+            "颈部V淋巴结清扫 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果完成了颈部II、III、IV、V区的淋巴结清扫或颈侧区淋巴结清扫，则认为符合要求",
+                "symbolic language": "Fact 1 ∨ (Fact 2 ∧ Fact 3 ∧ Fact 4 ∧ Fact 5) "
+            }
+        ]
+    },
+    "甲状腺癌质控指标_甲状腺癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的甲状腺癌患者数占接受首次治疗的甲状腺癌患者总数的比例。",
+        "formula": "甲状腺癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的甲状腺癌患者数/同期接受首次治疗的甲状腺癌患者总数×100%",
+        "significance": "反映病情评估的规范性。",
+        "other": "临床TNM分期检查评估符合策略：甲状腺超声+胸部CR（或胸部CT）±颈部增强CT±PET-CT。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前甲状腺癌患者的病历是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查评估符合策略：甲状腺超声+胸部CR（或胸部CT）±颈部增强CT±PET-CT。",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的甲状腺癌患者",
+        "denominator": "同期接受首次治疗的甲状腺癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查评估符合策略：甲状腺超声+胸部CR（或胸部CT）±颈部增强CT±PET-CT。",
+        "facts": [
+            "甲状腺超声检查 = 已完成/未完成。",
+            "胸部CR检查 = 已完成/未完成。",
+            "胸部CT检查 = 已完成/未完成。",
+            "颈部增强CT检查 = 已完成/未完成。",
+            "PET-CT检查 = 已完成/未完成。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果甲状腺超声检查已完成，则符合甲状腺超声要求。",
+                "symbolic language": "甲状腺超声检查 = 已完成"
+            },
+            {
+                "natural language": "如果胸部CR或胸部CT检查已完成，则符合胸部检查要求。",
+                "symbolic language": "胸部CR检查 = 已完成 ∨ 胸部CT检查 = 已完成"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真，则基本符合TNM分期检查要求。",
+                "symbolic language": " (甲状腺超声检查 = 已完成) ∧ (胸部CR检查 = 已完成 ∨ 胸部CT检查 = 已完成)"
+            },
+            {
+                "natural language": "颈部增强CT和PET-CT为可选项，但如已完成则提供额外信息。",
+                "symbolic language": " (颈部增强CT检查 = 已完成) ∨ (PET-CT检查 = 已完成)"
+            }
+        ]
+    },
+    "甲状腺癌质控指标_中央区淋巴结清扫率": {
+        "definition": "单位时间内，行中央区淋巴结清扫的甲状腺癌手术患者例数占同期甲状腺癌手术患者总例数的比例。",
+        "formula": "中央区淋巴结清扫率=行中央区淋巴结清扫的甲状腺癌手术患者例数/同期甲状腺癌手术患者总例数×100%",
+        "significance": "评价手术诊疗质量情况。",
+        "other": "中央区淋巴结是指颈部VI区淋巴结。目前国内外指南中均认为中央区淋巴结转移对于甲状腺癌患者预后存在不良影响。约50%的cN0甲状腺癌术后病理证实存在中央区淋巴结转移。因此目前指南推荐在有效保护喉返神经和甲状旁腺功能的前提下行预防性中央区淋巴结清扫。",
+        "instruction_standard": "你是一位专业的医生，请你判断甲状腺癌患者的病历是否符合行中央区淋巴结清扫的要求。中央区淋巴结是指颈部VI区淋巴结。",
+        "numerator": "行中央区淋巴结清扫的甲状腺癌手术患者",
+        "denominator": "同期甲状腺癌手术患者总例数",
+        "question_rule": "是否符合行中央区淋巴结清扫的要求。中央区淋巴结是指颈部VI区淋巴结。",
+        "facts": [
+            "中央区淋巴结清扫 = True/False（假设值）",
+            "颈部VI淋巴结清扫 = True/False（假设值）"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果完成了中央区淋巴结清扫或颈部VI淋巴结清，则认为符合要求",
+                "symbolic language": "Fact 1 ∨ Fact 2  "
+            }
+        ]
+    },
+    "短暂性脑缺血发作（TIA）质控指标_TIA患者ABCD2评分率（核心指标）": {
+        "definition": "单位时间内，住院期间完成ABCD2评分的TIA患者例数占同期住院TIA患者总例数的比例。",
+        "formula": "TIA患者ABCD2评分率=住院期间完成ABCD2评分的TIA患者例数/同期住院TIA患者总例数×100%",
+        "significance": "反映医疗机构对收住TIA患者卒中发生风险的评估情况。",
+        "other": "A（Age）:年龄≥60岁得1分。\nB（Bloodpressure）:收缩压≥140mmHg或舒张压≥90mmHg得1分。\nC（Clinicalfeatures）:临床症状，包括单侧无力得2分，语言障碍得1分，无症状得0分。\nD（Duration）:发作持续时间，≥60分钟得2分，≤59分钟得1分，<10分钟得0分。\nD（Diabetes）:糖尿病得1分。\n注：0~3分低危，4~5分中危，6~7分高危",
+        "instruction_standard": "你是一位专业的医生，请你判断TIA患者的病历是否符合住院期间完成ABCD2评分的要求。",
+        "numerator": "住院期间完成ABCD2评分的TIA患者",
+        "denominator": "同期住院TIA患者总例数",
+        "question_rule": "是否符合住院期间完成ABCD2评分的要求。",
+        "facts": [
+            "是否在住院期间完成了ABCD2评分 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果在住院期间完成了ABCD2评分，则符合住院要求。",
+                "symbolic language": "Completed_ABCD2 = (在住院期间完成评分) ? True : False"
+            }
+        ]
+    },
+    "短暂性脑缺血发作（TIA）质控指标_中高危TIA患者双联抗血小板治疗率（核心指标）": {
+        "definition": "单位时间内，中高危TIA患者接受双联抗血小板治疗的例数占同期住院中高危TIA患者总例数的比例。",
+        "formula": "中高危TIA患者双联抗血小板治疗率=中高危TIA患者接受双联抗血小板治疗的例数/同期住院中高危TIA患者总例数×100%",
+        "significance": "反映TIA规范化诊疗情况。",
+        "other": "（1）中高危TIA定义参考CHANCE研究，即ABCD2评分≥4分的TIA患者；（2）双联抗血小板治疗指阿司匹林联合氯吡格雷治疗。",
+        "instruction_standard": "你是一位专业的医生，请你判断中高危TIA患者的病历是否符合要求。要求是患者的ABCD2评分需达到4分或以上，并且接受阿司匹林联合氯吡格雷治疗。",
+        "numerator": "中高危TIA患者接受双联抗血小板治疗",
+        "denominator": "同期住院中高危TIA患者总例数",
+        "question_rule": "是否符合中高危TIA患者的要求。要求是患者的ABCD2评分需达到4分或以上，并且接受阿司匹林联合氯吡格雷治疗。",
+        "facts": [
+            "患者的ABCD2评分 = C（假设值）。",
+            "患者是否接受阿司匹林治疗 = D（假设值，True或False）。",
+            "患者是否接受氯吡格雷治疗 = E（假设值，True或False）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果C >= 4，则ABCD2评分符合要求。",
+                "symbolic language": "C >= 4"
+            },
+            {
+                "natural language": "如果D为真且E为真，则患者接受了联合治疗。",
+                "symbolic language": "D ∧ E"
+            }
+        ]
+    },
+    "结直肠癌质控指标_结直肠癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的结直肠癌患者数占接受首次治疗的结直肠癌患者总数的比例。",
+        "formula": "结直肠癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的结直肠癌患者数/同期接受首次治疗的结直肠癌患者总数×100%",
+        "significance": "反映病情评估的规范性。",
+        "other": "临床TNM分期检查符合基本策略：胸部增强CT+腹部增强CT+盆腔增强CT。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前结直肠癌患者病历是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查符合基本策略为胸部增强CT+腹部增强CT+盆腔增强CT。",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的结直肠癌患者",
+        "denominator": "同期接受首次治疗的结直肠癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查符合基本策略为胸部增强CT+腹部增强CT+盆腔增强CT。",
+        "facts": [
+            "患者进行了胸部增强CT检查 = True/False（假设值）。",
+            "患者进行了腹部增强CT检查 = True/False（假设值）。",
+            "患者进行了盆腔增强CT检查 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者进行了胸部增强CT检查，则符合该部分要求。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果患者进行了腹部增强CT检查，则符合该部分要求。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果患者进行了盆腔增强CT检查，则符合该部分要求。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1、Logical Rule 2和Logical Rule 3均为真，则患者符合临床TNM分期检查要求。",
+                "symbolic language": " (Fact 1 ) ∧ (Fact 2 ) ∧ (Fact 3 )"
+            }
+        ]
+    },
+    "结直肠癌质控指标_结直肠癌患者非手术治疗前病理学诊断率": {
+        "definition": "首次非手术治疗前完成病理学诊断的结直肠癌患者数占接受首次非手术治疗的结直肠癌患者总数的比例。",
+        "formula": "结直肠癌患者非手术治疗前病理学诊断率=首次非手术治疗前完成病理学诊断的结直肠癌患者数/同期接受首次非手术治疗的结直肠癌患者总数×100%",
+        "significance": "反映结直肠癌治疗规范性。",
+        "other": "本指标的非手术治疗包括放疗、化疗、靶向治疗、免疫治疗等治疗",
+        "instruction_standard": "你是一位专业的医生，请你判断首次非手术治疗前结直肠癌患者的病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次非手术治疗前完成病理学诊断的结直肠癌患者",
+        "denominator": "同期接受首次非手术治疗的结直肠癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "病理学诊断已完成（True/False）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为是，则病理学诊断已完成。则患者符合首次非手术治疗前完成病理学诊断的要求。",
+                "symbolic language": "Fact 1 = True"
+            }
+        ]
+    },
+    "结直肠癌质控指标_术中淋巴结清扫充分率（CA-CRC-06）": {
+        "definition": "术中清扫淋巴结数量≥12枚的结直肠癌患者数占行结直肠癌手术治疗患者总数的比例。",
+        "formula": "术中淋巴结清扫充分率=术中清扫淋巴结数量≥12枚的结直肠癌患者数/同期行结直肠癌手术治疗患者总数×100%",
+        "significance": "淋巴结清扫是术后准确病理分期和达到根治性切除的重要保证，反映结直肠癌手术治疗的规范性。",
+        "other": "除外新辅助治疗患者。",
+        "instruction_standard": "你是一位专业的医生，请你判断结直肠癌患者病历是否符合术中清扫淋巴结数量≥12枚的要求。",
+        "numerator": "术中清扫淋巴结数量≥12枚的结直肠癌患者",
+        "denominator": "同期行结直肠癌手术治疗患者总数",
+        "question_rule": "是否符合术中清扫淋巴结数量≥12枚的要求。",
+        "facts": [
+            "术中清扫的淋巴结数量 = N（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果N ≥ 12，则术中清扫淋巴结数量符合要求。",
+                "symbolic language": "N ≥ 12"
+            }
+        ]
+    },
+    "肝癌质控指标_肝细胞癌患者首次治疗前临床中国肝癌分期检查策略符合率": {
+        "definition": "首次治疗前完成临床中国肝癌分期检查评估符合策略的肝细胞癌患者数占接受首次治疗的肝细胞癌患者总数的比例。",
+        "formula": "肝细胞癌患者首次治疗前临床中国肝癌分期检查策略符合率=首次治疗前完成临床中国肝癌分期检查评估符合策略的肝细胞癌患者数/同期接受首次治疗的肝细胞癌患者总数×100%",
+        "significance": "反映评估病情的规范性。",
+        "other": "临床中国肝癌分期检查策略至少包括上腹部增强MRI或增强CT+腹部彩超+胸部CT",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前肝细胞癌患者病历是否符合完成临床中国肝癌分期检查评估符合策略的要求。临床中国肝癌分期检查策略至少包括上腹部增强MRI或增强CT+腹部彩超+胸部CT",
+        "numerator": "首次治疗前完成临床中国肝癌分期检查评估符合策略的肝细胞癌患者",
+        "denominator": "同期接受首次治疗的肝细胞癌患者总数",
+        "question_rule": "是否符合完成临床中国肝癌分期检查评估符合策略的要求。临床中国肝癌分期检查策略至少包括上腹部增强MRI或增强CT+腹部彩超+胸部CT",
+        "facts": [
+            "患者进行了上腹部增强MRI检查 = True/False。",
+            "患者进行了上腹部增强CT检查 = True/False。",
+            "患者进行了腹部彩超检查 = True/False。",
+            "患者进行了胸部CT检查 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者进行了上腹部增强MRI检查或上腹部增强CT检查，则符合上腹部成像要求。",
+                "symbolic language": "MRI ∨ CT"
+            },
+            {
+                "natural language": "如果患者进行了腹部彩超检查，则符合腹部彩超要求。",
+                "symbolic language": "Ultrasound"
+            },
+            {
+                "natural language": "如果患者进行了胸部CT检查，则符合胸部CT要求。",
+                "symbolic language": "Chest_CT"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真，则患者符合首次治疗前检查要求。",
+                "symbolic language": " (MRI ∨ CT) ∧ Ultrasound ∧ Chest_CT"
+            }
+        ]
+    },
+    "肝癌质控指标_肝内胆管癌患者首次治疗前临床TNM分期检查策略符合率": {
+        "definition": "首次治疗前完成临床TNM分期检查评估符合策略的肝内胆管癌患者数占接受首次治疗的肝内胆管癌患者总数的比例",
+        "formula": "肝内胆管癌患者首次治疗前临床TNM分期检查策略符合率=首次治疗前完成临床TNM分期检查评估符合策略的肝内胆管癌患者数/同期接受首次治疗的肝内胆管癌患者总数×100%",
+        "significance": "反映评估病情的规范性。",
+        "other": "临床TNM分期检查策略至少包括上腹部增强MRI或增强CT+腹部彩超+胸部CT",
+        "instruction_standard": "你是一位专业的医生，请你判断肝首次治疗前内胆管癌患者的病历是否符合完成临床TNM分期检查评估符合策略的要求。临床TNM分期检查策略至少包括上腹部增强MRI或增强CT、腹部彩超和胸部CT。",
+        "numerator": "首次治疗前完成临床TNM分期检查评估符合策略的肝内胆管癌患者",
+        "denominator": "同期接受首次治疗的肝内胆管癌患者总数",
+        "question_rule": "是否符合完成临床TNM分期检查评估符合策略的要求。临床TNM分期检查策略至少包括上腹部增强MRI或增强CT、腹部彩超和胸部CT。",
+        "facts": [
+            "上腹部增强MRI检查 = True/False（假设值）。",
+            "上腹部增强CT检查 = True/False（假设值）。",
+            "腹部彩超检查 = True/False（假设值）。",
+            "胸部CT检查 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果上腹部增强MRI检查为真或上腹部增强CT检查为真，则满足上腹部检查要求。",
+                "symbolic language": "MRI ∨ CT"
+            },
+            {
+                "natural language": "如果腹部彩超检查为真，则满足腹部彩超检查要求。",
+                "symbolic language": "彩超"
+            },
+            {
+                "natural language": "如果胸部CT检查为真，则满足胸部CT检查要求。",
+                "symbolic language": "胸部CT"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真，则患者符合临床TNM分期检查策略要求。",
+                "symbolic language": " (MRI ∨ CT) ∧ 彩超 ∧ 胸部CT"
+            }
+        ]
+    },
+    "肝癌质控指标_肝内胆管癌患者首次非手术治疗前病理学诊断率": {
+        "definition": "首次非手术治疗前完成病理学诊断的肝内胆管癌患者数占接受首次非手术治疗的肝内胆管癌患者总数的比例。",
+        "formula": "肝内胆管癌患者首次非手术治疗前病理学诊断率=首次非手术治疗前完成病理学诊断的肝内胆管癌患者数/同期接受首次非手术治疗的肝内胆管癌患者总数×100%",
+        "significance": "反映肝内胆管癌诊治规范性。",
+        "other": "本指标的非手术治疗是指经皮穿刺的局部治疗如肝动脉化疗栓塞术（TACE）、消融治疗（射频、微波、无水乙醇注射、冷冻、高强度超声聚焦消融、激光消融、不可逆电穿孔等）、放射治疗及系统治疗（化疗、靶向药物、免疫检查点抑制剂、生物治疗）等。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次非手术治疗前肝内胆管癌患者病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次非手术治疗前完成病理学诊断的肝内胆管癌患者",
+        "denominator": "同期接受首次非手术治疗的肝内胆管癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "患者进行了组织活检 = True/False（假设值）。",
+            "患者进行了细胞学检查 = True/False（假设值）。",
+            "病理学诊断结果确认肝内胆管癌 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真或Fact 2为真，则病理学诊断程序已进行。",
+                "symbolic language": " (Fact 1 ∨ Fact 2)"
+            },
+            {
+                "natural language": "如果Fact 3为真且，则病理学诊断确认肝内胆管癌。",
+                "symbolic language": " Fact 3"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真，则首次非手术治疗前病理学诊断已完成。",
+                "symbolic language": " ((Fact 1 ∨ Fact 2) ∧ (Fact 3)] "
+            }
+        ]
+    },
+    "肺癌_肺癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的肺癌患者数占接受首次治疗的肺癌患者总数的比例。",
+        "formula": "肺癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的肺癌患者数/同期接受首次治疗的肺癌患者总数×100%",
+        "significance": "反映评估病情的规范性。",
+        "other": "临床TNM分期检查符合策略是指符合基本策略1或基本策略2。基本策略1：胸部CT+颈部CT（或颈部超声）+骨扫描+腹部CT（或腹部超声）+脑部CT（或脑部MRI）；基本策略2：全身PET-CT±脑部MRI。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前肺癌患者病历是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查符合策略是指符合基本策略1或基本策略2。基本策略1：胸部CT+颈部CT（或颈部超声）+骨扫描+腹部CT（或腹部超声）+脑部CT（或脑部MRI）；基本策略2：全身PET-CT±脑部MRI。",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的肺癌患者",
+        "denominator": "同期接受首次治疗的肺癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查符合策略是指符合基本策略1或基本策略2。基本策略1：胸部CT+颈部CT（或颈部超声）+骨扫描+腹部CT（或腹部超声）+脑部CT（或脑部MRI）；基本策略2：全身PET-CT±脑部MRI。",
+        "facts": [
+            "胸部CT检查 = True/False",
+            "颈部CT检查 = True/False",
+            "颈部超声检查 = True/False",
+            "骨扫描检查 = True/False",
+            "腹部CT检查 = True/False",
+            "腹部超声检查 = True/False",
+            "脑部CT检查 = True/False",
+            "脑部MRI检查 = True/False",
+            "全身PET-CT检查 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "基本策略1符合条件",
+                "symbolic language": "胸部CT检查 ∧ (颈部CT检查 ∨ 颈部超声检查) ∧ 骨扫描检查 ∧ (腹部CT检查 ∨ 腹部超声检查) ∧ (脑部CT检查 ∨ 脑部MRI检查)"
+            },
+            {
+                "natural language": "基本策略2符合条件// 脑部MRI为可选项",
+                "symbolic language": "全身PET-CT检查 ∧ (脑部MRI检查 ∨ True) "
+            },
+            {
+                "natural language": "临床TNM分期检查符合策略",
+                "symbolic language": "Logical Rule 1 ∨ Logical Rule 2"
+            }
+        ]
+    },
+    "肺癌_肺癌患者非手术治疗前病理学诊断率": {
+        "definition": "首次非手术治疗前完成病理学诊断的肺癌患者数占接受首次非手术治疗的肺癌患者总数的比例。",
+        "formula": "肺癌患者非手术治疗前病理学诊断率=首次非手术治疗前完成病理学诊断的肺癌患者数/同期接受首次非手术治疗的肺癌患者总数×100%",
+        "significance": "明确病理诊断是肿瘤综合治疗方案选择的基础。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断首次非手术治疗肺癌患者的病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次非手术治疗前完成病理学诊断的肺癌患者",
+        "denominator": "接受首次非手术治疗的肺癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "已进行组织活检 = True/False",
+            "已进行细胞学检查 = True/False",
+            "病理学诊断已完成 = True/False",
+            "病理学诊断结果明确了肺癌类型 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1或Fact 2为真，则病理学诊断已进行。",
+                "symbolic language": "组织活检 ∨ 细胞学检查 = True"
+            },
+            {
+                "natural language": "如果Fact 3为真，则病理学诊断已完成。",
+                "symbolic language": "病理学诊断已完成 = True"
+            },
+            {
+                "natural language": "如果Fact 4为真，则病理学诊断结果明确肺癌类型。",
+                "symbolic language": "肺癌类型明确 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真，则患者符合完成病理学诊断的要求。",
+                "symbolic language": "(组织活检 ∨ 细胞学检查) ∧ 病理学诊断已完成 ∧ 肺癌类型明确 = True] "
+            }
+        ]
+    },
+    "肺癌_肺癌切除术术中淋巴结清扫率": {
+        "definition": "肺癌切除术术中接受淋巴结清扫的患者数占行肺癌切除术的患者总数的比例。",
+        "formula": "肺癌切除术术中淋巴结清扫率=肺癌切除术术中接受淋巴结清扫的患者数/同期行肺癌切除术的患者总数×100%",
+        "significance": "淋巴结清扫是术后准确病理分期和达到完全性切除的重要保证，反映肺癌手术规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断肺癌切除术的患者病历是否符合术中接受淋巴结清扫的要求。",
+        "numerator": "肺癌切除术术中接受淋巴结清扫的患者",
+        "denominator": "同期行肺癌切除术的患者总数",
+        "question_rule": "是否符合术中接受淋巴结清扫的要求。",
+        "facts": [
+            "确定术中是否进行了淋巴结清扫。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "确定术中是否进行了淋巴结清扫。",
+                "symbolic language": "fact 1 = True"
+            }
+        ]
+    },
+    "肺癌_肺癌切除术术中纵隔淋巴结清扫充分率": {
+        "definition": "肺癌切除术术中纵隔淋巴结清扫站数≥3站的患者数占肺癌切除术的患者总数的比例。",
+        "formula": "肺癌切除术术中纵隔淋巴结清扫充分率=肺癌切除术术中纵隔淋巴结清扫站数≥3站的患者数/同期肺癌切除术的患者总数×100%",
+        "significance": "淋巴结充分清扫是术后准确病理分期和达到完全性切除的重要保证，反映肺癌手术规范性。上纵隔淋巴结2/3/4，下纵隔淋巴结8/9",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断肺癌切除术术中纵隔淋巴结清扫站数是否符合≥3站的患者病历。上纵隔淋巴结2/3/4，下纵隔淋巴结8/9",
+        "numerator": "肺癌切除术术中纵隔淋巴结清扫站数≥3站的患者",
+        "denominator": "同期肺癌切除术的患者总数",
+        "question_rule": "是否符合纵隔淋巴结清扫站数≥3站。上纵隔淋巴结2/3/4，下纵隔淋巴结8/9。",
+        "facts": [
+            "上纵隔淋巴结站点2清扫 = T/F（假设值）。",
+            "上纵隔淋巴结站点3清扫 = T/F（假设值）。",
+            "上纵隔淋巴结站点4清扫 = T/F（假设值）。",
+            "下纵隔淋巴结站点8清扫 = T/F（假设值）。",
+            "下纵隔淋巴结站点9清扫 = T/F（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果站点2被清扫，则计数+1。",
+                "symbolic language": "Count += 1 if Fact 1 == T"
+            },
+            {
+                "natural language": "如果站点3被清扫，则计数+1。",
+                "symbolic language": "Count += 1 if Fact 2 == T"
+            },
+            {
+                "natural language": "如果站点4被清扫，则计数+1。",
+                "symbolic language": "Count += 1 if Fact 3 == T"
+            },
+            {
+                "natural language": "如果站点8被清扫，则计数+1。",
+                "symbolic language": "Count += 1 if Fact 4 == T"
+            },
+            {
+                "natural language": "如果站点9被清扫，则计数+1。",
+                "symbolic language": "Count += 1 if Fact 5 == T"
+            },
+            {
+                "natural language": "如果计数≥3，则符合淋巴结清扫站数要求。",
+                "symbolic language": "Count ≥ 3"
+            }
+        ]
+    },
+    "肾癌质控指标_肾癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的肾癌患者数占接受首次治疗的肾癌患者总数的比例。",
+        "formula": "肾癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的肾癌患者数/同期接受首次治疗的肾癌患者总数×100%",
+        "significance": "反映病情评估的规范性。",
+        "other": "临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：腹部增强CT/腹部增强核磁+腹部彩超+胸部CT平扫/胸部X线；基本策略2：PET-CT。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前肾癌患者病历是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：腹部增强CT/腹部增强核磁+腹部彩超+胸部CT平扫/胸部X线；基本策略2：PET-CT。",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的肾癌患者",
+        "denominator": "同期接受首次治疗的肾癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。基本策略1：腹部增强CT/腹部增强核磁+腹部彩超+胸部CT平扫/胸部X线；基本策略2：PET-CT。",
+        "facts": [
+            "腹部增强CT = C1（假设值，True或False）。",
+            "腹部增强核磁 = M1（假设值，True或False）。",
+            "腹部彩超 = U1（假设值，True或False）。",
+            "胸部CT平扫 = C2（假设值，True或False）。",
+            "胸部X线 = X1（假设值，True或False）。",
+            "PET-CT = P1（假设值，True或False）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果C1为真或M1为真，则腹部增强检查符合要求。",
+                "symbolic language": "C1 ∨ M1"
+            },
+            {
+                "natural language": "如果U1为真，则腹部彩超符合要求。",
+                "symbolic language": "U1"
+            },
+            {
+                "natural language": "如果C2为真或X1为真，则胸部检查符合要求。",
+                "symbolic language": "C2 ∨ X1"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真，则基本策略1符合要求。",
+                "symbolic language": " (C1 ∨ M1) ∧ U1 ∧ (C2 ∨ X1)"
+            },
+            {
+                "natural language": "如果P1为真，则基本策略2符合要求。",
+                "symbolic language": "P1"
+            },
+            {
+                "natural language": "如果Logical Rule 4为真或Logical Rule 5为真，则TNM分期检查评估符合要求。",
+                "symbolic language": " [(C1 ∨ M1) ∧ U1 ∧ (C2 ∨ X1)] ∨ P1"
+            }
+        ]
+    },
+    "肾癌质控指标_肾癌患者首次非手术治疗前病理学诊断率": {
+        "definition": "首次非手术治疗前完成病理学诊断的肾癌患者数占接受首次非手术治疗的肾癌患者总数的比例。",
+        "formula": "肾癌患者首次非手术治疗前病理学诊断率=首次非手术治疗前完成病理学诊断的肾癌患者数/同期接受首次非手术治疗的肾癌患者总数×100%",
+        "significance": "反映肾癌诊治规范性。",
+        "other": "非手术治疗包括化疗、免疫、放疗、消融治疗等。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次非手术治疗前肾癌患者的病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次非手术治疗前完成病理学诊断的肾癌患者",
+        "denominator": "同期接受首次非手术治疗的肾癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "组织活检结果确认肾癌 = True/False（假设值）。",
+            "细胞学检查结果确认肾癌 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果组织活检结果确认肾癌，则病理学诊断完成。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果细胞学检查结果确认肾癌，则病理学诊断完成。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则患者符合完成病理学诊断的要求。",
+                "symbolic language": "Fact 1 ∨ Fact 2"
+            }
+        ]
+    },
+    "胃癌质控指标_胃癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的胃癌患者数占接受首次治疗的胃癌患者总数的比例。",
+        "formula": "胃癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的胃癌患者数/同期接受首次治疗的胃癌患者总数×100%",
+        "significance": "反映病情评估的规范性。",
+        "other": "临床TNM分期检查评估符合策略：腹部增强CT/MRI+胸部平扫CT+盆腔增强CT/MRI。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前胃癌患者的病历是否符合临床TNM分期检查评估符合策略的要求。相关补充：临床TNM分期检查评估需包含腹部增强CT/MRI、胸部平扫CT和盆腔增强CT/MRI。",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的胃癌患者",
+        "denominator": "同期接受首次治疗的胃癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估符合策略的要求。相关补充：临床TNM分期检查评估需包含腹部增强CT/MRI、胸部平扫CT和盆腔增强CT/MRI。",
+        "facts": [
+            "患者是否进行了腹部增强CT或MRI检查 = True/False。",
+            "患者是否进行了胸部平扫CT检查 = True/False。",
+            "患者是否进行了盆腔增强CT或MRI检查 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则腹部检查符合要求。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果Fact 2为真，则胸部检查符合要求。",
+                "symbolic language": "Fact 2 = True"
+            },
+            {
+                "natural language": "如果Fact 3为真，则盆腔检查符合要求。",
+                "symbolic language": "Fact 3 = True"
+            },
+            {
+                "natural language": "如果Logical Rule 1、Logical Rule 2和Logical Rule 3均为真，则患者的检查评估符合临床TNM分期要求。",
+                "symbolic language": " (Fact 1 ) ∧ (Fact 2 ) ∧ (Fact 3 )"
+            }
+        ]
+    },
+    "胃癌质控指标_胃癌患者首次治疗前病理学诊断率": {
+        "definition": "首次治疗前完成病理学诊断的胃癌患者数占首次治疗的胃癌患者总数的比例。",
+        "formula": "胃癌患者首次治疗前病理学诊断率=首次治疗前完成病理学诊断的胃癌患者数/同期首次治疗的胃癌患者总数×100%",
+        "significance": "反映胃癌诊疗的规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前胃癌患者的病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次治疗前完成病理学诊断的胃癌患者",
+        "denominator": "同期首次治疗的胃癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "患者已进行胃部活检 = True/False。",
+            "活检结果确诊癌症 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者已进行胃部活检，则继续。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果活检结果确诊癌症，则病理学诊断符合要求。",
+                "symbolic language": "Fact 2  = True"
+            },
+            {
+                "natural language": "如果进行了胃部活检且Logical Rule 2为真，则符合诊断要求。",
+                "symbolic language": "Logical Rule 1 ∧ Logical Rule 2 = True "
+            }
+        ]
+    },
+    "胃癌质控指标_接受内镜治疗的胃癌患者术后切缘阳性率": {
+        "definition": "接受内镜治疗术后病理提示切缘阳性的胃癌患者数占接受内镜治疗的胃癌患者总数的比例。",
+        "formula": "接受内镜治疗的胃癌患者术后切缘阳性率=接受内镜治疗术后病理提示切缘阳性的胃癌患者数/同期接受内镜治疗的胃癌患者总数×100%",
+        "significance": "反映胃癌内镜治疗质量。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断接受内镜治疗的胃癌患者的病历是否满术后病理提示切缘阳性的要求。",
+        "numerator": "接受内镜治疗术后病理提示切缘阳性的胃癌患者",
+        "denominator": "同期接受内镜治疗的胃癌患者总数",
+        "question_rule": "是否符合术后病理提示切缘阳性的要求。",
+        "facts": [
+            "术后病理报告存在 = True/False",
+            "术后病理报告显示切缘状态 = 阳性/阴性（假设值）"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真，则术后病理报告存在。",
+                "symbolic language": "Fact 1 "
+            },
+            {
+                "natural language": "如果Fact 2为真，则切缘为阳性。",
+                "symbolic language": "Fact 2 = \"阳性\" "
+            },
+            {
+                "natural language": "如果Logical Rule 1和Logical Rule 2，则术后病理提示切缘阳性。",
+                "symbolic language": "Fact 1 ∧ (Fact 2 = \\\"阳性\\\") "
+            }
+        ]
+    },
+    "脑梗死（首次住院）（STK）质控指标_脑梗死患者神经功能缺损评估率": {
+        "definition": "单位时间内，入院时采用美国国立卫生研究院卒中量表(NIHSS)进行神经功能缺损评估的脑梗死患者数，占同期住院脑梗死患者总数的比例。",
+        "formula": "脑梗死患者神经功能缺损评估率=入院时神经功能缺损NIHSS评估的脑梗死患者数/同期住院脑梗死患者总数×100%",
+        "significance": "反映医疗机构收住院脑梗死患者病情评估开展情况。",
+        "other": "（1）美国国立卫生研究院卒中量表(NIHSS)参照《中国脑血管病临床管理指南》的中文翻译版本。\n（2）脑梗死即缺血性卒中，采用《中国脑血管病临床管理指南》定义，是指因脑部血液循环障碍，缺血、缺氧所致的局限性脑组织缺血性坏死或软化",
+        "instruction_standard": "你是一位专业的医生，请你判断脑梗死患者病历是否符合入院时进行神经功能缺损NIHSS评估的要求。",
+        "numerator": "入院时神经功能缺损NIHSS评估的脑梗死患者",
+        "denominator": "同期住院脑梗死患者总数",
+        "question_rule": "是否符合入院时进行神经功能缺损NIHSS评估的要求。",
+        "facts": [
+            "入院时进行了NIHSS评估 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "根据Fact 1为真 ,则脑梗死患者的病历符合入院时进行神经功能缺损NIHSS评估的要求。",
+                "symbolic language": "Fact 1 "
+            }
+        ]
+    },
+    "脑梗死（首次住院）（STK）质控指标_发病4.5小时内脑梗死患者静脉溶栓率": {
+        "definition": "单位时间内，发病4.5小时内静脉溶栓治疗的脑梗死患者数占同期发病4.5小时内到院的脑梗死患者总数的比例。",
+        "formula": "发病4.5小时内脑梗死患者静脉溶栓率=发病4.5小时内静脉溶栓治疗的脑梗死患者数/同期发病4.5小时内到院的脑梗死患者总数×100%",
+        "significance": "反映医疗机构开展发病4.5小时内脑梗死患者静脉溶栓救治的能力。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断脑梗死患者的病历是否符合发病4.5小时内静脉溶栓治疗的要求。",
+        "numerator": "发病4.5小时内静脉溶栓治疗的脑梗死患者",
+        "denominator": "同期发病4.5小时内到院的脑梗死患者总数",
+        "question_rule": "是否符合发病4.5小时内静脉溶栓治疗的要求。",
+        "facts": [
+            "静脉溶栓治疗 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1 = True，则符合静脉溶栓治疗。",
+                "symbolic language": "Fact 1 "
+            }
+        ]
+    },
+    "脑梗死（首次住院）（STK）质控指标_非致残性脑梗死患者发病24小时内双重强化抗血小板药物治疗率": {
+        "definition": "单位时间内，发病24小时内给予阿司匹林和氯吡格雷强化抗血小板药物治疗的非致残性脑梗死（NIHSS≤3分）患者数，占同期住院非致残性脑梗死患者总数的比例。",
+        "formula": "非致残性脑梗死患者发病24小时内双重强化抗血小板药物治疗率=发病24小时内给予双重强化抗血小板治疗的非致残性脑梗死患者数/同期住院非致残性脑梗死患者总数×100%",
+        "significance": "反映非致残性脑梗死急性期规范化诊疗情况",
+        "other": "入院评估表NIHSS评分＜4分；双重强化抗血小板治疗（阿司匹林及氯吡格雷",
+        "instruction_standard": "你是一位专业的医生，请你判断非致残性脑梗死患者的病历是否符合在发病24小时内给予双重强化抗血小板治疗的要求。相关补充信息包括：入院评估表NIHSS评分＜4分；双重强化抗血小板治疗（阿司匹林及氯吡格雷）。",
+        "numerator": "发病24小时内给予双重强化抗血小板治疗的非致残性脑梗死患者",
+        "denominator": "同期住院非致残性脑梗死患者总数",
+        "question_rule": "是否符合在发病24小时内给予双重强化抗血小板治疗的要求。相关补充信息包括：入院评估表NIHSS评分＜4分；双重强化抗血小板治疗（阿司匹林及氯吡格雷）。",
+        "facts": [
+            "是否在发病24小时内 = T（假设值）",
+            "NIHSS评分 = N（假设值）。",
+            "是否给予阿司匹林 = True/False（假设值）。",
+            "是否给予氯吡格雷 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果发病24小时，则符合要求",
+                "symbolic language": "T < 24h"
+            },
+            {
+                "natural language": "如果N < 4，则患者为非致残性脑梗死。",
+                "symbolic language": "N < 4"
+            },
+            {
+                "natural language": "如果给予了阿司匹林和氯吡格雷，则给予了双重抗血小板治疗。",
+                "symbolic language": "给予阿司匹林 ∧ 给予氯吡格雷"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真且Logical Rule 2为真且Logical Rule 3为真，则患者符合治疗要求。",
+                "symbolic language": " （T < 24h）∧ (N < 4) ∧ (给予阿司匹林 ∧ 给予氯吡格雷)"
+            }
+        ]
+    },
+    "脑梗死（首次住院）（STK）质控指标_脑梗死患者吞咽功能筛查率": {
+        "definition": "单位时间内，进食、水前进行吞咽功能筛查的住院脑梗死患者数，占同期住院治疗的脑梗死患者总数的比例。",
+        "formula": "脑梗死患者吞咽功能筛查率=进食、水前进行吞咽功能筛查的住院脑梗死患者数/同期住院治疗的脑梗死患者总数×100%",
+        "significance": "反映医疗机构减少住院期间并发症的诊疗措施执行情况。",
+        "other": "吞咽功能筛查工具包括洼田饮水试验、洼田吞咽功能障碍评价、Gugging吞咽功能评估表（GUSS）、视频X线透视吞咽检查（VFSS）、显微内镜吞咽功能检查（FEES）。",
+        "instruction_standard": "你是一位专业的医生，请你判断住院脑梗死患者的病历是否符合进食、水前进行吞咽功能筛查的要求。吞咽功能筛查工具包括洼田饮水试验、洼田吞咽功能障碍评价、Gugging吞咽功能评估表（GUSS）、视频X线透视吞咽检查（VFSS）、显微内镜吞咽功能检查（FEES）。",
+        "numerator": "进食、水前进行吞咽功能筛查的住院脑梗死患者",
+        "denominator": "同期住院治疗的脑梗死患者总数",
+        "question_rule": "是否符合进食、水前进行吞咽功能筛查的要求。吞咽功能筛查工具包括洼田饮水试验、洼田吞咽功能障碍评价、Gugging吞咽功能评估表（GUSS）、视频X线透视吞咽检查（VFSS）、显微内镜吞咽功能检查（FEES）。",
+        "facts": [
+            "洼田饮水试验已完成 = True/False。",
+            "洼田吞咽功能障碍评价已完成 = True/False。",
+            "Gugging吞咽功能评估已完成 = True/False。",
+            "视频X线透视吞咽检查（VFSS）已完成 = True/False。",
+            "显微内镜吞咽功能检查（FEES）已完成 = True/False。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果至少一个吞咽功能筛查工具已完成，则符合筛查要求。",
+                "symbolic language": "Fact 1 ∨ Fact 2 ∨ Fact 3 ∨ Fact 4 ∨ Fact 5"
+            }
+        ]
+    },
+    "脑梗死（首次住院）（STK）质控指标_发病24小时内脑梗死患者血管内治疗率（核心指标）": {
+        "definition": "单位时间内，发病24小时内行血管内治疗脑梗死患者数与同期收治发病24小时内脑梗死患者总数的比例。",
+        "formula": "发病24小时内脑梗死患者血管内治疗率=发病24小时内行血管内治疗脑梗死患者数/同期收治发病24小时内脑梗死患者总数×100%",
+        "significance": "反映医疗机构发病24小时内脑梗死患者行血管内治疗的现状，以及医疗机构脑梗死患者急救管理的质量。",
+        "other": "血管内治疗包含：动脉溶栓术、支架取栓术、血栓抽吸术、球囊扩张术、支架置入术。排除：发病24小时内仅行颅脑DSA检查，未实施血管内治疗操作的脑梗死患者；发病24小时以上行血管内治疗的脑梗死患者。",
+        "instruction_standard": "你是一位专业的医生，请你判断脑梗死患者的病历是否符合在发病24小时内行血管内治疗的要求。",
+        "numerator": "发病24小时内行血管内治疗脑梗死患者",
+        "denominator": "同期收治发病24小时内脑梗死患者总数",
+        "question_rule": "是否符合在发病24小时内行血管内治疗的要求。",
+        "facts": [
+            "是否在发病24小时内 = T（假设值）",
+            "血管内治疗 = Ture/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果发病24小时，则符合要求",
+                "symbolic language": "T < 24h"
+            },
+            {
+                "natural language": "如果Fact 1 = True，则符合行血管内治疗的要求。",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果logical rules1且logical rules2为真，则符合24h行血管内治疗的要求.",
+                "symbolic language": "（T < 24h）∧ （Fact 1 = True）"
+            }
+        ]
+    },
+    "脑梗死（首次住院）（STK）质控指标_发病24小时内脑梗死患者血管内治疗术前影像学评估率": {
+        "definition": "单位时间内，发病24小时内脑梗死患者行血管内治疗术前行影像学评估人数占发病24小时内脑梗死患者行血管内治疗人数的比例。",
+        "formula": "发病24小时内脑梗死患者血管内治疗术前影像学评估率=发病24小时内脑梗死患者行血管内治疗术前行影像学评估人数/同期发病24小时内脑梗死患者行血管内治疗人数×100%",
+        "significance": "反映医疗机构发病24小时内脑梗死患者行血管内治疗术前规范化影像评估的现状。",
+        "other": "术前影像学评估包含ASPECTS评分和多模式影像。ASPECTS评分是一种基于CT检查的简单、可靠和系统的早期缺血改变评价方法，也可通过CTP及MRIDWI计算。多模式影像可基于CTA、CTP及多模式磁共振成像评估。",
+        "instruction_standard": "你是一位专业的医生，请你判断发病24小时内行血管内治疗术前脑梗死患者的病历是否符合在进行影像学评估的要求。",
+        "numerator": "发病24小时内脑梗死患者行血管内治疗术前行影像学评估",
+        "denominator": "同期发病24小时内脑梗死患者行血管内治疗人数",
+        "question_rule": "是否符合进行影像学评估的要求。",
+        "facts": [
+            "完成影像学评估 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1 为真，则患者符合影像学评估要求。",
+                "symbolic language": " Fact 1"
+            }
+        ]
+    },
+    "脑梗死（首次住院）（STK）质控指标_发病24小时内脑梗死患者行血管内治疗术后即刻再通率": {
+        "definition": "单位时间内，发病24小时内脑梗死患者行血管内治疗者中，术后即刻脑血管造影提示靶血管成功再通的患者所占比例。",
+        "formula": "发病24小时内脑梗死患者行血管内治疗术后即刻再通率=发病24小时内脑梗死患者行血管内治疗术后即刻脑血管造影提示靶血管成功再通人数/同期发病24小时内脑梗死患者行血管内治疗人数×100%",
+        "significance": "",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断发病24小时内行血管内治疗术后脑梗死患者病历是否符合行血管内治疗术后即刻再通的要求。",
+        "numerator": "发病24小时内脑梗死患者行血管内治疗术后即刻脑血管造影提示靶血管成功再通",
+        "denominator": "同期发病24小时内脑梗死患者行血管内治疗人数",
+        "question_rule": "是否符合即行血管内治疗术后即刻再通的要求。",
+        "facts": [
+            "是否在发病24小时内 = T（假设值）",
+            "脑血管造影提示靶血管成功再通 = （True/False）假设值"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果发病24小时，则符合要求",
+                "symbolic language": "T < 24h"
+            },
+            {
+                "natural language": "如果脑血管造影提示靶血管成功再通,则符合要求",
+                "symbolic language": "Fact 1 = True"
+            },
+            {
+                "natural language": "如果logical rules1且logical rules2为真，则符合24h脑血管造影提示靶血管成功再通的要求.",
+                "symbolic language": "（T < 24h）∧ （Fact 1 = True）"
+            }
+        ]
+    },
+    "食管癌_食管癌患者首次治疗前临床TNM分期检查评估策略符合率": {
+        "definition": "首次治疗前临床TNM分期检查评估符合策略的食管癌患者数占接受首次治疗的食管癌患者总数的比例。",
+        "formula": "食管癌患者首次治疗前临床TNM分期检查评估策略符合率=首次治疗前临床TNM分期检查评估符合策略的食管癌患者数/同期接受首次治疗的食管癌患者总数×100%",
+        "significance": "反映病情评估的规范性。",
+        "other": "临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。\n基本策略1：（胸部+上腹部）CT+颈部彩超/颈部CT+胃镜；\n基本策略2：PET-CT+胃镜。",
+        "instruction_standard": "你是一位专业的医生，请你判断首次治疗前食管癌患者病历是否符合临床TNM分期检查评估符合策略的要求。",
+        "numerator": "首次治疗前临床TNM分期检查评估符合策略的食管癌患者",
+        "denominator": "同期接受首次治疗的食管癌患者总数",
+        "question_rule": "是否符合临床TNM分期检查评估符合策略的要求。临床TNM分期检查评估符合策略是指符合基本策略1或基本策略2。\n基本策略1：（胸部+上腹部）CT+颈部彩超/颈部CT+胃镜；\n基本策略2：PET-CT+胃镜。",
+        "facts": [
+            "患者是否完成胸部+上腹部CT检查 = （假设值，True或False）。",
+            "患者是否完成颈部彩超或颈部CT检查 = （假设值，True或False）。",
+            "患者是否完成胃镜检查 = （假设值，True或False）。",
+            "患者是否完成PET-CT检查 = （假设值，True或False）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1 = True 且 Fact 2 = True 且 Fact 3 = True，则符合基本策略1。",
+                "symbolic language": "Fact 1 ∧ Fact 2 ∧ Fact 3"
+            },
+            {
+                "natural language": "如果Fact 3 = True 且 Fact 4 = True，则符合基本策略2。",
+                "symbolic language": "Fact 3 ∧ Fact 4"
+            },
+            {
+                "natural language": "如果Logical Rule 1为真或Logical Rule 2为真，则符合TNM分期检查评估策略。",
+                "symbolic language": "(Fact 1 ∧ Fact 2 ∧ Fact 3) ∨ (Fact 3 ∧ Fact 4)"
+            }
+        ]
+    },
+    "食管癌_食管癌患者首次抗肿瘤治疗前病理学诊断率（核心指标）": {
+        "definition": "首次抗肿瘤治疗前完成病理学诊断的食管癌患者数占接受首次抗肿瘤治疗的食管癌患者总数的比例。",
+        "formula": "食管癌患者首次抗肿瘤治疗前病理学诊断率=首次抗肿瘤治疗前完成病理学诊断的食管癌患者数/同期接受首次抗肿瘤治疗的食管癌患者总数×100%",
+        "significance": "反映食管癌诊治规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断首次抗肿瘤治疗前食管癌患者的病历是否符合完成病理学诊断的要求。",
+        "numerator": "首次抗肿瘤治疗前完成病理学诊断的食管癌患者",
+        "denominator": "同期接受首次抗肿瘤治疗的食管癌患者总数",
+        "question_rule": "是否符合完成病理学诊断的要求。",
+        "facts": [
+            "患者是否进行了组织活检 = True/False（假设值）。",
+            "组织活检结果是否可用 = True/False（假设值）。",
+            "病理学检查是否确认了癌症的存在 = True/False（假设值）。",
+            "病理学检查是否确认了癌症的类型 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果患者进行了组织活检且结果可用，则满足病理学诊断的初步要求。",
+                "symbolic language": "Fact 1 ∧ Fact 2"
+            },
+            {
+                "natural language": "如果病理学检查确认了癌症的存在和类型，则满足病理学诊断的完整要求。",
+                "symbolic language": "Fact 3 ∧ Fact 4"
+            },
+            {
+                "natural language": "如果Logical Rule 1和Logical Rule 2都为真，则患者符合完成病理学诊断的要求。",
+                "symbolic language": " (Fact 1 ∧ Fact 2) ∧ (Fact 3 ∧ Fact 4)"
+            }
+        ]
+    },
+    "食管癌_食管癌患者根治性手术淋巴结清扫充分率": {
+        "definition": "食管癌根治性手术术中淋巴结清扫个数≥15枚的患者数占食管癌根治性手术患者总数的比例。",
+        "formula": "食管癌患者根治性手术淋巴结清扫充分率=食管癌根治性手术术中淋巴结清扫个数≥15枚的患者数/同期食管癌根治性手术患者总数×100%",
+        "significance": "淋巴结清扫是术后准确病理分期和达到根治性切除的重要保证，反映食管癌手术规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断食管癌患者病历是否符合手术中淋巴结清扫个数≥15枚的要求。",
+        "numerator": "食管癌根治性手术术中淋巴结清扫个数≥15枚的患者",
+        "denominator": "同期食管癌根治性手术患者总数",
+        "question_rule": "是否符合手术中淋巴结清扫个数≥15枚的要求。",
+        "facts": [
+            "手术中清扫的淋巴结数量 = N（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果N ≥ 15，则淋巴结清扫数量符合手术要求。",
+                "symbolic language": "N ≥ 15"
+            }
+        ]
+    },
+    "高血压病_心血管风险评估率（核心指标）": {
+        "definition": "单位时间内，住院期间接受心血管风险评估的高血压患者数，占同期高血压住院患者总数的比例。",
+        "formula": "心血管风险评估率=住院期间接受心血管风险评估的高血压患者数/同期高血压住院患者总数×100%",
+        "significance": "评价医院对高血压患者规范评估情况。",
+        "other": "心血管风险评估是指完成了心脏、肾脏、血管、眼底四项检查中的两项及以上。",
+        "instruction_standard": "你是一位专业的医生，请你判断高血压患者的病历是否符合住院期间接受心血管风险评估的要求。心血管风险评估是指完成了心脏、肾脏、血管、眼底四项检查中的两项及以上。",
+        "numerator": "住院期间接受心血管风险评估的高血压患者",
+        "denominator": "同期高血压住院患者总数",
+        "question_rule": "是否符合住院期间接受心血管风险评估的要求。心血管风险评估是指完成了心脏、肾脏、血管、眼底四项检查中的两项及以上。",
+        "facts": [
+            "心脏检查完成 = True/False（假设值）。",
+            "肾脏检查完成 = True/False（假设值）。",
+            "血管检查完成 = True/False（假设值）。",
+            "眼底检查完成 = True/False（假设值）。"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果心脏检查完成，则心脏检查计数为1，否则为0。",
+                "symbolic language": "心脏检查计数 = 1 if Fact 1 else 0"
+            },
+            {
+                "natural language": "如果肾脏检查完成，则肾脏检查计数为1，否则为0。",
+                "symbolic language": "肾脏检查计数 = 1 if Fact 2 else 0"
+            },
+            {
+                "natural language": "如果血管检查完成，则血管检查计数为1，否则为0。",
+                "symbolic language": "血管检查计数 = 1 if Fact 3 else 0"
+            },
+            {
+                "natural language": "如果眼底检查完成，则眼底检查计数为1，否则为0。",
+                "symbolic language": "眼底检查计数 = 1 if Fact 4 else 0"
+            },
+            {
+                "natural language": "计算总检查计数。",
+                "symbolic language": "总检查计数 = 心脏检查计数 + 肾脏检查计数 + 血管检查计数 + 眼底检查计数"
+            },
+            {
+                "natural language": "如果总检查计数 >= 2，则患者符合心血管风险评估要求。",
+                "symbolic language": "总检查计数 >= 2 "
+            }
+        ]
+    },
+    "冠状动脉旁路移植术（CABG）质控指标_单纯冠状动脉旁路移植术中乳内动脉血管桥使用率": {
+        "definition": "单位时间内，行单纯冠状动脉旁路移植术中使用乳内动脉血管桥的患者数，占同期行单纯冠状动脉旁路移植术的患者总数的比例。",
+        "formula": "单纯冠状动脉旁路移植术中乳内动脉血管桥使用率 = 行单纯冠状动脉旁路移植术中使用乳内动脉血管桥的患者数/同期行单纯冠状动脉旁路移植术的患者总数×100%",
+        "significance": "评价手术血管桥选择的规范性。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断行单纯冠状动脉旁路移植术的患者病历是否描述使用乳内动脉血管桥。",
+        "numerator": "行单纯冠状动脉旁路移植术中使用乳内动脉血管桥的患者",
+        "denominator": "同期行单纯冠状动脉旁路移植术的患者总数",
+        "question_rule": "是否描述使用乳内动脉血管桥。",
+        "facts": [
+            "手术中使用了IMA作为血管桥 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果Fact 1为真,则使用乳内动脉血管桥。",
+                "symbolic language": " Fact 1"
+            }
+        ]
+    },
+    "冠状动脉旁路移植术（CABG）质控指标_桥血管流量测定率（核心指标）": {
+        "definition": "单位时间内，行冠状动脉旁路移植手术中行桥血管流量测定的患者数，占同期行单纯冠状动脉旁路移植术的患者总数的比例。",
+        "formula": "桥血管流量测定率 = 冠状动脉旁路移植手术中行桥血管流量测定的患者数/同期行单纯冠状动脉旁路移植术的患者总数×100%",
+        "significance": "评价手术诊疗质量情况。",
+        "other": "",
+        "instruction_standard": "你是一位专业的医生，请你判断冠状动脉旁路移植手术的患者病历是否完成行桥血管流量测定要求。",
+        "numerator": "冠状动脉旁路移植手术中行桥血管流量测定的患者",
+        "denominator": "同期行单纯冠状动脉旁路移植术的患者总数",
+        "question_rule": "是否完成行桥血管流量测定要求。",
+        "facts": [
+            "术后桥血管流量测定已进行 = True/False"
+        ],
+        "logical_rules": [
+            {
+                "natural language": "如果进行桥血管流量测定，则患者符合桥血管流量测定要求。",
+                "symbolic language": "Fact 1 = True"
+            }
+        ]
+    }
+}
