@@ -10,3 +10,6 @@ openai >= 1.43.0
 
 tqdm 
 
+# Quick start
+bash main.sh
+
