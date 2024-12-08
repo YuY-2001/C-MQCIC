@@ -13,3 +13,9 @@ tqdm
 # Quick start
 bash main.sh
 
+set your openai key in funtion
+
+def send_chat_completion_request(model_name, message_content,temperature=0.01):
+
+    key = "Bearer {key}" #set your keys
+
