@@ -1,21 +1,21 @@
 # C-MQCIC
-The dataset for C-MQCIC, an chinese open-source dataset for medical quality control indicator calculation
 
-Requirement
+C-MQCIC is an open-source Chinese dataset for medical quality control indicator calculation. We will release all the experiment results in the future.
 
-We release the code with GPT call. If use the vllm or transformers, please read the related reference.
+## Requirements
 
-must
-openai >= 1.43.0
+The released code utilizes GPT calls. If you intend to use `vllm` or `transformers`, please refer to the relevant documentation.
 
-tqdm 
+### Dependencies
+- `openai >= 1.43.0`
+- `tqdm`
 
-# Quick start
+## Quick Start
+
+Run the following command:
+
+```bash
 bash main.sh
 
-set your openai key in funtion
-
-def send_chat_completion_request(model_name, message_content,temperature=0.01):
-
-    key = "Bearer {key}" #set your keys
-
+def send_chat_completion_request(model_name, message_content, temperature=0.01):
+    key = "Bearer {key}"  # Set your API key here
