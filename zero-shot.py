@@ -23,7 +23,7 @@ def read_json(file_path):
 import requests
 def send_chat_completion_request(model_name, message_content,temperature=0.01):
     url = "https://openkey.cloud/v1/chat/completions" 
-    key = "Bearer sk-mZp0p3SXEhftBKa17eB64c5957F54d8886DaFf9e88655262"
+    key = "Bearer [set your key]"
     headers = {"Content-Type": "application/json","Authorization":key} 
     data = { 
         "model": model_name, 
