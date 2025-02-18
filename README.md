@@ -3,7 +3,8 @@
 C-MQCIC is an open-source Chinese dataset for medical quality control indicator calculation. We will release all the experiment results in the future.
 
 # The overview of CF-IR
-[framework.pdf](https://github.com/user-attachments/files/18839782/framework.pdf)
+
+![PDF 第一页](https://github.com/username/repository/raw/branch/path/to/image.png)
 
 ## Requirements
 
