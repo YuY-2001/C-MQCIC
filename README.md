@@ -30,3 +30,16 @@ def send_chat_completion_request(model_name, message_content, temperature=0.01):
 
 ```
 
+## Citation
+
+```
+@inproceedings{ye2025imqc,
+  title={IMQC: A Large Language Model Platform for Medical Quality Control},
+  author={Ye, Qi and Yu, Guangya and Liu, Jingping and Chen, Erzhen and Dong, Chenjie and Lin, Xiaosheng and Liu, Zelei and Yu, Han and Ruan, Tong},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={28},
+  pages={28810--28818},
+  year={2025}
+}
+```
