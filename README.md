@@ -6,6 +6,11 @@ C-MQCIC is an open-source Chinese dataset for medical quality control indicator 
 
 https://huggingface.co/datasets/YuY2001/CMQCIC
 
+# Explanation of files
+
+<img width="1647" height="1079" alt="image" src="https://github.com/user-attachments/assets/b93073f0-a6e6-480d-a370-0f10614f7e4f" />
+
+
 # The example of the medical quality control indicator calculation
 
 <img src="https://github.com/user-attachments/assets/6ef83434-4c1e-41d1-9d87-1620d00dfe19" alt="task_new_00" width="50%" />
