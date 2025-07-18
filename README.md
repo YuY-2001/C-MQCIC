@@ -51,4 +51,12 @@ def send_chat_completion_request(model_name, message_content, temperature=0.01):
   pages={28810--28818},
   year={2025}
 }
+@article{Yu2025CMQCICBenchAC,
+  title={CMQCIC-Bench: A Chinese Benchmark for Evaluating Large Language Models in Medical Quality Control Indicator Calculation},
+  author={Guangya Yu and Yanhao Li and Zongying Jiang and Yuxiong Jin and Li Dai and Yupian Lin and Ruihui Hou and Weiyan Zhang and Yongqi Fan and Qi Ye and Jingping Liu and Tong Ruan},
+  journal={ArXiv},
+  year={2025},
+  volume={abs/2502.11703},
+  url={https://api.semanticscholar.org/CorpusID:276409291}
+}
 ```
