@@ -51,12 +51,32 @@ def send_chat_completion_request(model_name, message_content, temperature=0.01):
   pages={28810--28818},
   year={2025}
 }
-@article{Yu2025CMQCICBenchAC,
-  title={CMQCIC-Bench: A Chinese Benchmark for Evaluating Large Language Models in Medical Quality Control Indicator Calculation},
-  author={Guangya Yu and Yanhao Li and Zongying Jiang and Yuxiong Jin and Li Dai and Yupian Lin and Ruihui Hou and Weiyan Zhang and Yongqi Fan and Qi Ye and Jingping Liu and Tong Ruan},
-  journal={ArXiv},
-  year={2025},
-  volume={abs/2502.11703},
-  url={https://api.semanticscholar.org/CorpusID:276409291}
+@inproceedings{yu-etal-2025-cmqcic,
+    title = "{CMQCIC}-Bench: A {C}hinese Benchmark for Evaluating Large Language Models in Medical Quality Control Indicator Calculation",
+    author = "Yu, Guangya  and
+      Li, Yanhao  and
+      Jiang, Zongying  and
+      Jin, Yuxiong  and
+      Dai, Li  and
+      Lin, Yupian  and
+      Hou, Ruihui  and
+      Zhang, Weiyan  and
+      Fan, Yongqi  and
+      Ye, Qi  and
+      Liu, Jingping  and
+      Ruan, Tong",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.34/",
+    pages = "609--626",
+    ISBN = "979-8-89176-256-5",
+    abstract = "Medical quality control indicators are essential to assess the qualifications of healthcare institutions for medical services. With the impressive performance of large language models (LLMs) like GPT-4 in the medical field, leveraging these technologies for the Medical Quality Control Indicator Calculation (MQCIC) presents a promising approach. In this work, (1) we introduce a real-world task MQCIC and propose an open-source Chinese electronic medical records (EMRs)-based dataset (CMQCIC-Bench) comprising 785 instances and 76 indicators. (2) We propose a semi-automatic method to enhance the rule representation. Then we propose the Clinical Facts-based Inferential Rule (CF-IR) method that disentangles the clinical fact verification and inferential rule reasoning actions. (3) We conduct comprehensive experiments on 20 representative LLMs, covering general and medical models. Our findings reveal that CF-IR outperforms Chain-of-Thought methods in MQCIC tasks. (4) We conduct an error analysis and investigate the capabilities of clinical fact verification and inferential rule reasoning, providing insights to improve performance in the MQCIC further. The dataset and code is available in this repository https://github.com/YuY-2001/C-MQCIC."
 }
 ```
